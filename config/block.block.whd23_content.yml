@@ -1,0 +1,22 @@
+uuid: 7ce8a908-4052-4661-aa7e-2dd1fb52acea
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - whd23
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: whd23_content
+theme: whd23
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

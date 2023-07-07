@@ -6,6 +6,6 @@ country:
 timezone:
   default: UTC
   user:
-    configurable: false
+    configurable: true
     default: 0
     warn: false

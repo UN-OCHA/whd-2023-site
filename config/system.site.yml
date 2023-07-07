@@ -1,15 +1,14 @@
 _core:
-  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
-uuid: 8b187b50-276f-4848-a7e5-f1c218f62345
-name: Starterkit
-mail: starterkit@test.test
+uuid: 080540ce-f45e-42f6-bd15-7eba8b9da5c0
+name: 'WHD 2023'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-mail_notification: ''

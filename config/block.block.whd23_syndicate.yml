@@ -1,0 +1,23 @@
+uuid: 3e0775e2-f0db-4317-8fc6-257fdfb3ea1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - whd23
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: whd23_syndicate
+theme: whd23
+region: sidebar_first
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

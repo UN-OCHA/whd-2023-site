@@ -1,0 +1,20 @@
+uuid: 23d9b63b-924a-455a-8e99-33ba32b3150a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - whd23
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: whd23_page_title
+theme: whd23
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: fe9e83ac-375d-4dc4-83d3-9e261e32f2f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - whd23
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: whd23_search_form_wide
+theme: whd23
+region: sidebar_first
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

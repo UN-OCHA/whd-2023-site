@@ -1,0 +1,22 @@
+uuid: 93017e39-511d-4575-bb0e-8f4badbb6d5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - whd23
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: whd23_powered
+theme: whd23
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }
