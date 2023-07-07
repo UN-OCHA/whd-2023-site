@@ -50,6 +50,9 @@ buildlog.txt
 /coverage/
 /html/sites/default/browser_output/
 
+# Docksal
+.docksal/docksal-local.env
+
 ###> squizlabs/php_codesniffer ###
 /.phpcs-cache
 /tests/coverage/
