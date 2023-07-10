@@ -1,0 +1,31 @@
+{
+  "name": "WHD 2023",
+  "version": "1.0.0",
+  "description": "World Humanitarian Day 2023",
+  "repository": "git@github.com:UN-OCHA/whd-site-2023.git",
+  "author": "UN OCHA",
+  "license": "GPL-2.0",
+  "scripts": {
+    "css:lint": "stylelint '{css,components}/**/*.css'",
+    "css:lint-fix": "stylelint '{css,components}/**/*.css' --fix",
+    "js:lint": "eslint js/*.js",
+    "release": "standard-version"
+  },
+  "engines": {
+    "node": "^18.16.1",
+    "npm": "^9.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "standard-version": "^9.3.2",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-order": "^6.0.3"
+  },
+  "//": "skip creation of git tags, which we manage on GitHub.",
+  "standard-version": {
+    "skip": {
+      "tag": true
+    }
+  }
+}
