@@ -1,9 +1,9 @@
 uuid: 4dd52e82-e7ff-4275-be6c-c81d3c464f23
-langcode: en
+langcode: fr
 status: true
 dependencies: {  }
 id: fr
-label: French
+label: Français
 direction: ltr
 weight: -7
 locked: false

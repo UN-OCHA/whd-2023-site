@@ -1,9 +1,9 @@
 uuid: cfa8d13b-142a-4ff0-87cf-f807204785f7
-langcode: en
+langcode: ru
 status: true
 dependencies: {  }
 id: ru
-label: Russian
+label: Русский
 direction: ltr
 weight: -6
 locked: false
