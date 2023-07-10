@@ -6,6 +6,68 @@
  */
 
 /**
+ * Implements hook_preprocess_html().
+ */
+function whd23_preprocess_html(&$vars) {
+  // Check if current request is an exception to get error type.
+  $status_code = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
+
+  // Add body classes.
+  if ($status_code && $status_code->getStatusCode() == 404) {
+    $vars['attributes']['class'][] = 'path-error path-error--404';
+  }
+  if ($status_code && $status_code->getStatusCode() == 403) {
+    $vars['attributes']['class'][] = 'path-error path-error--403';
+  }
+
+  // Add a script to detect whether javascript is enabled or not and then
+  // replace the `no-js` class with the `js` one.
+  //
+  // Drupal.js does this but way too late on first load causing issues with
+  // css rules that rely on the `js` class being defined or not.
+  $js_detection = [
+    '#tag' => 'script',
+    '#value' => "document.documentElement.className = document.documentElement.className.replace('no-js', typeof document.addEventListener !== 'undefined' ? 'js' : 'no-js');",
+    '#weight' => -1,
+  ];
+  $vars['page']['#attached']['html_head'][] = [$js_detection, 'js-detection'];
+
+  // Construct a <link>s for Roboto: two that preconnect to Google Fonts, for a
+  // nominal performance improvement, and the link to the CSS file itself.
+  //
+  // To edit the font selection, visit the following URL:
+  //
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans:wght@400;900
+  $preconnect_api = [
+    'rel' => 'preconnect',
+    'href' => 'https://fonts.googleapis.com',
+  ];
+  $preconnect_static = [
+    'rel' => 'preconnect',
+    'href' => 'https://fonts.gstatic.com',
+    'crossorigin' => TRUE,
+  ];
+  $noto_sans = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&display=swap',
+  ];
+
+  // Add <link>s to HTML response.
+  $vars['page']['#attached']['html_head_link'][] = [
+    $preconnect_api,
+    'preconnect-api',
+  ];
+  $vars['page']['#attached']['html_head_link'][] = [
+    $preconnect_static,
+    'preconnect-static',
+  ];
+  $vars['page']['#attached']['html_head_link'][] = [
+    $noto_sans,
+    'noto-sans',
+  ];
+}
+
+/**
  * Implements hook_preprocess_image_widget().
  */
 function whd23_preprocess_image_widget(array &$variables) {

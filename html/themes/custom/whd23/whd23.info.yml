@@ -6,6 +6,7 @@ version: 1.0.0
 
 libraries:
   - core/normalize
+  - whd23/global-styling
 
 # Historical metadata from theme creation
 generator: 'starterkit_theme:10.0.3'
