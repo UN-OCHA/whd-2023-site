@@ -210,7 +210,7 @@
         "theme-prepare": "cd html/themes/custom/whd23 && npm install",
         "sub-theme": "test -d html/themes/custom/common_design_subtheme || (cp -r html/themes/contrib/common_design/common_design_subtheme html/themes/custom/ && mv html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml.example html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml)",
         "sass": [
-            "@theme-prepare",
+            "@theme-prepare"
         ],
         "post-install-cmd": [
             "@git-hooks"
