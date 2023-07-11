@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f850740bf06a8d1e535d7aaf2dd6c32e",
+    "content-hash": "1565b7395f73da56528e515e91ff8d3b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2206,8 +2206,14 @@
             "version": "8.3.16",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
+                "url": "https://github.com/pfrenssen/coder.git",
                 "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "reference": "d6f6112e5e84ff4f6baaada223c93dadbd6d3887",
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -3002,6 +3008,22 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "acquia",
+                    "homepage": "https://www.drupal.org/user/1231722"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "kaynen",
+                    "homepage": "https://www.drupal.org/user/733308"
+                },
+                {
+                    "name": "mglaman",
+                    "homepage": "https://www.drupal.org/user/2416470"
+                },
                 {
                     "name": "solotandem",
                     "homepage": "https://www.drupal.org/user/240748"
@@ -4239,6 +4261,10 @@
                     "homepage": "https://www.drupal.org/user/2375692"
                 },
                 {
+                    "name": "poker10",
+                    "homepage": "https://www.drupal.org/user/272316"
+                },
+                {
                     "name": "RenatoG",
                     "homepage": "https://www.drupal.org/user/3326031"
                 },
@@ -5324,6 +5350,7 @@
                 "issues": "https://github.com/pel/pel/issues",
                 "source": "https://github.com/pel/pel/tree/0.9.12"
             },
+            "abandoned": true,
             "time": "2022-02-18T13:20:54+00:00"
         },
         {
@@ -12812,8 +12839,8 @@
                     "homepage": "https://www.drupal.org/user/93488"
                 },
                 {
-                    "name": "vuil",
-                    "homepage": "https://www.drupal.org/user/3568458"
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
                 }
             ],
             "description": "Provides a configuration data and structure inspector tool",
@@ -13858,7 +13885,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1"
+        "php": ">=8.2"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
