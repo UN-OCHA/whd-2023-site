@@ -43,4 +43,15 @@
    * Accessibility-related properties
    */
   --cd-outline-size: 3px;
+
+  /**
+   * Site-specific brand defaults.
+   *
+   * Unlike CD, override the values directly in this section:
+   */
+  --brand-primary: var(--cd-blue--ocha);
+  --brand-primary--light: var(--cd-blue--bright);
+  --brand-primary--dark: var(--cd-blue--dark);
+  --brand-highlight: #E56A54;
+  --brand-grey: #E9F2FB;
 }

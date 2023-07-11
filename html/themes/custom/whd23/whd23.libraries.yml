@@ -7,3 +7,8 @@ global-styling:
     theme:
       components/cd/cd-other/cd-print.css: {}
       css/brand.css: {}
+
+cd-tabs:
+  css:
+    component:
+      components/cd-tabs/cd-tabs.css: {}
