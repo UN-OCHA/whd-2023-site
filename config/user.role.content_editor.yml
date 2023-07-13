@@ -10,6 +10,7 @@ dependencies:
     - contextual
     - file
     - node
+    - paragraphs_type_permissions
     - path
     - system
     - taxonomy
@@ -26,16 +27,24 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
-  - 'administer url aliases'
   - 'create page content'
+  - 'create paragraph content heading'
+  - 'create paragraph content text'
+  - 'create paragraph content video'
   - 'create terms in tags'
   - 'create url aliases'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'delete paragraph content heading'
+  - 'delete paragraph content text'
+  - 'delete paragraph content video'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'update paragraph content heading'
+  - 'update paragraph content text'
+  - 'update paragraph content video'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

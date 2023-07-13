@@ -8,6 +8,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - paragraphs_type_permissions
     - search
     - shortcut
     - system
@@ -26,3 +27,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view paragraph content heading'
+  - 'view paragraph content text'
+  - 'view paragraph content video'
