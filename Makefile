@@ -1,10 +1,9 @@
 # Variables. Yes.
 DOCKER=docker
-DOCKER_BUILDKIT=0
 
 # The main build recipe.
 build:  clean
-	DOCKER_BUILDKIT=$(DOCKER_BUILDKIT) $(DOCKER) build \
+	$(DOCKER) build \
 				--build-arg BRANCH_ENVIRONMENT=$(NODE_ENV) \
 				--build-arg VCS_REF=`git rev-parse --short HEAD` \
 				--build-arg VCS_URL=`git config --get remote.origin.url | sed 's#git@github.com:#https://github.com/#'` \
@@ -12,7 +11,7 @@ build:  clean
 				--build-arg GITHUB_ACTOR=`whoami` \
 				--build-arg GITHUB_REPOSITORY=`git config --get remote.origin.url` \
 				--build-arg GITHUB_SHA=`git rev-parse --short HEAD` \
-		. --file docker/Dockerfile --tag public.ecr.aws/unocha/starterkit-site:local \
+		. --file docker/Dockerfile --tag public.ecr.aws/unocha/whd-2023-site:local \
 		2>&1 | tee buildlog.txt
 
 clean:
