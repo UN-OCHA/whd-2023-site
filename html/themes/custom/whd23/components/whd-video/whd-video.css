@@ -1,0 +1,38 @@
+/**
+ * WHD Video Embeds
+ */
+.video {
+  aspect-ratio: 4 / 3;
+  position: relative;
+}
+
+.video__link {
+  position: absolute;
+  display: block;
+  inset: 0;
+}
+
+.video__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.video__button {
+  position: absolute;
+  display: block;
+  width: 73.4px;
+  height: 51.8px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent url('button-youtube.png') no-repeat 50% 50%;
+  background-size: contain;
+  inset: 50%;
+}
+
+.video__iframe {
+  width: 100%;
+  height: 100%;
+}

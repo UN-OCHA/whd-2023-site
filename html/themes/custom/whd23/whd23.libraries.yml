@@ -12,3 +12,10 @@ cd-tabs:
   css:
     component:
       components/cd-tabs/cd-tabs.css: {}
+
+whd-video:
+  css:
+    component:
+      components/whd-video/whd-video.css: {}
+  js:
+    components/whd-video/whd-video.js: {}
