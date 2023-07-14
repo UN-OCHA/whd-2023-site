@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - node.type.page
+    - node.type.story
     - taxonomy.vocabulary.tags
   module:
     - comment
+    - content_translation
     - contextual
     - file
     - node
+    - paragraphs
     - paragraphs_type_permissions
     - path
     - system
@@ -27,24 +30,45 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'create content translations'
   - 'create page content'
   - 'create paragraph content heading'
   - 'create paragraph content text'
   - 'create paragraph content video'
+  - 'create story content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any page content'
+  - 'delete any story content'
+  - 'delete content translations'
   - 'delete own page content'
+  - 'delete own story content'
   - 'delete page revisions'
   - 'delete paragraph content heading'
   - 'delete paragraph content text'
   - 'delete paragraph content video'
+  - 'delete story revisions'
+  - 'edit any page content'
+  - 'edit any story content'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit own story content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'revert page revisions'
+  - 'revert story revisions'
+  - 'translate any entity'
+  - 'translate editable entities'
+  - 'translate page node'
+  - 'translate paragraph'
+  - 'translate story node'
+  - 'update content translations'
   - 'update paragraph content heading'
   - 'update paragraph content text'
   - 'update paragraph content video'
   - 'view all revisions'
   - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view story revisions'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'

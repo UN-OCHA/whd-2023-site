@@ -1,17 +1,32 @@
+#####
+# Global Styling is always enabled on all pages.
+#
 global-styling:
   css:
     base:
       components/cd/cd-resets/cd-resets.css: {}
+      components/whd-resets/whd-resets.css: {}
     component:
       components/cd/cd-other/cd-skip-link.css: {}
     theme:
       components/cd/cd-other/cd-print.css: {}
       css/brand.css: {}
 
+#####
+# Completely unaltered CD components.
+#
 cd-tabs:
   css:
     component:
       components/cd-tabs/cd-tabs.css: {}
+
+#####
+# WHD-specific components
+#
+whd-images:
+  css:
+    component:
+      components/whd-images/whd-images.css: {}
 
 whd-video:
   css:

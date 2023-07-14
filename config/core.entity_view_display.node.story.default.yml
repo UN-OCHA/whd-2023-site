@@ -1,0 +1,61 @@
+uuid: 5a61656a-1340-4de0-be80-39c90b25f6c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.story.field_content
+    - field.field.node.story.field_images
+    - field.field.node.story.field_survivor_profile
+    - image.style.gallery_item
+    - node.type.story
+  module:
+    - entity_reference_revisions
+    - image
+    - nomarkup
+    - user
+id: node.story.default
+targetEntityType: node
+bundle: story
+mode: default
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: gallery_item
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+    weight: 2
+    region: content
+  field_survivor_profile:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

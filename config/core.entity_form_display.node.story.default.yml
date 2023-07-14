@@ -1,23 +1,25 @@
-uuid: a671eb62-e5a6-4b72-8522-12e9d9b8365c
+uuid: 3387f57f-744d-4e95-b9cf-a4b337d28229
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content
-    - node.type.page
+    - field.field.node.story.field_content
+    - field.field.node.story.field_images
+    - field.field.node.story.field_survivor_profile
+    - image.style.thumbnail
+    - node.type.story
   module:
+    - image
     - paragraphs
     - path
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.story.default
 targetEntityType: node
-bundle: page
+bundle: story
 mode: default
 content:
   field_content:
     type: paragraphs
-    weight: 1
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -34,15 +36,31 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_survivor_profile:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 2
+    weight: 4
     region: content
     settings:
       display_label: true
