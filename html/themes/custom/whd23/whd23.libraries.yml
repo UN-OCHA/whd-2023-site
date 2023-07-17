@@ -6,6 +6,8 @@ global-styling:
     base:
       components/cd/cd-resets/cd-resets.css: {}
       components/whd-resets/whd-resets.css: {}
+    layout:
+      components/whd-layout/whd-layout--page.css: {}
     component:
       components/cd/cd-other/cd-skip-link.css: {}
     theme:

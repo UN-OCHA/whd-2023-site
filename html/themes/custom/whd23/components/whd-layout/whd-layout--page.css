@@ -1,0 +1,12 @@
+/**
+ * WHD-specific Page layout
+ */
+
+:root {
+  --whd-layout-max-width: 920px;
+}
+
+body {
+  max-width: var(--whd-layout-max-width);
+  margin: 0 auto;
+}
