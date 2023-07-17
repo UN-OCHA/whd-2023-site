@@ -24,6 +24,8 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view paragraph content heading'
+  - 'view paragraph content principle'
+  - 'view paragraph content principles_list'
   - 'view paragraph content story_list'
   - 'view paragraph content text'
   - 'view paragraph content video'

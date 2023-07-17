@@ -1,0 +1,10 @@
+uuid: 87916a65-614a-4002-bf15-2ff37aae09fe
+langcode: en
+status: true
+dependencies: {  }
+id: principle
+label: Principle
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

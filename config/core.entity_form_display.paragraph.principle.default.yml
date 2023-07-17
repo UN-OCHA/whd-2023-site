@@ -1,0 +1,45 @@
+uuid: cf915d7a-cac6-4688-9234-0309130f116c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.principle.field_icon
+    - field.field.paragraph.principle.field_text
+    - field.field.paragraph.principle.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.principle
+  module:
+    - image
+    - text
+id: paragraph.principle.default
+targetEntityType: paragraph
+bundle: principle
+mode: default
+content:
+  field_icon:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

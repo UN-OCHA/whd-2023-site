@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.story
+    - paragraphs.paragraphs_type.principle
   module:
     - entity_reference_revisions
 id: node.story.field_content
@@ -20,11 +21,21 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      principle: principle
     negate: 1
     target_bundles_drag_drop:
       heading:
         weight: 4
+        enabled: false
+      principle:
+        weight: 7
+        enabled: true
+      principles_list:
+        weight: 9
+        enabled: false
+      story_list:
+        weight: 10
         enabled: false
       text:
         weight: 5
