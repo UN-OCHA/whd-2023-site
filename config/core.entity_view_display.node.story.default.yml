@@ -11,7 +11,6 @@ dependencies:
   module:
     - entity_reference_revisions
     - image
-    - nomarkup
     - user
 id: node.story.default
 targetEntityType: node
@@ -35,10 +34,7 @@ content:
       image_style: gallery_item
       image_loading:
         attribute: lazy
-    third_party_settings:
-      nomarkup:
-        enabled: false
-        separator: '|'
+    third_party_settings: {  }
     weight: 2
     region: content
   field_survivor_profile:
@@ -46,10 +42,7 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings:
-      nomarkup:
-        enabled: true
-        separator: '|'
+    third_party_settings: {  }
     weight: 1
     region: content
   links:
