@@ -53,7 +53,7 @@
       {{ content|without('field_video_url') }}
 
       <div class="video" data-video-slug="{{ video_slug }}" data-video-button-label="{{ 'Load video'|t }}">
-        <a href="{{ content.field_video_url|render|striptags|trim }}"
+        <a href="{{ video_url }}"
           target="_blank"
           rel="noopener"
           class="video__link">
@@ -61,7 +61,7 @@
             class="video__img"
             loading="lazy"
             src="https://i.ytimg.com/vi/{{ video_slug }}/hqdefault.jpg"
-            alt="Preview of {{ content.field_video_url|render|striptags|trim }}">
+            alt="{{ 'Preview of the video from YouTube'|t }}">
         </a>
       </div>
     {% endblock %}

@@ -79,6 +79,7 @@ function whd23_preprocess_paragraph__video(&$variables) {
     $qs = parse_url($paragraph->get('field_video_url')->first()->uri, PHP_URL_QUERY);
     parse_str($qs, $params);
     $variables['video_slug'] = $params['v'];
+    $variables['video_url'] = $paragraph->get('field_video_url')->first()->uri;
   }
 }
 
