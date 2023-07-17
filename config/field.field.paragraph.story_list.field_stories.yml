@@ -1,0 +1,29 @@
+uuid: f46028fe-5ab5-4d68-89a1-ae855429e84a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stories
+    - node.type.story
+    - paragraphs.paragraphs_type.story_list
+id: paragraph.story_list.field_stories
+field_name: field_stories
+entity_type: paragraph
+bundle: story_list
+label: Stories
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      story: story
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

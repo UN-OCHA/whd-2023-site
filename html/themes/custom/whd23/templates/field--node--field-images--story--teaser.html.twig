@@ -39,7 +39,6 @@
 {{ attach_library('whd23/whd-images') }}
 
 <figure{{ attributes.addClass(['story-item__images', 'whd-images']) }}>
-  {% for item in items %}
-    <div{{ item.attributes }}>{{ item.content }}</div>
-  {% endfor %}
+  {% set item = items|first %}
+  <div{{ item.attributes }}>{{ item.content }}</div>
 </figure>

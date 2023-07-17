@@ -7,21 +7,36 @@ dependencies:
     - field.field.node.story.field_content
     - field.field.node.story.field_images
     - field.field.node.story.field_survivor_profile
+    - image.style.gallery_item
     - node.type.story
   module:
+    - image
     - user
 id: node.story.teaser
 targetEntityType: node
 bundle: story
 mode: teaser
 content:
-  links:
-    settings: {  }
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: gallery_item
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    weight: 100
+    weight: 0
+    region: content
+  field_survivor_profile:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   field_content: true
-  field_images: true
-  field_survivor_profile: true
   langcode: true
+  links: true

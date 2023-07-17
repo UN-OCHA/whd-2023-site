@@ -1,0 +1,55 @@
+/**
+ * WHD Story List
+ */
+
+:root {
+  --whd-card-list-num-cols: 1;
+  --whd-card-list-gap-size: 1.5rem;
+}
+
+.story-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--whd-card-list-gap-size);
+  margin-block: 2rem;
+}
+
+.story-list > * {
+  flex: 0 1 calc((100% / var(--whd-card-list-num-cols)) - var(--whd-card-list-gap-size) + var(--whd-card-list-gap-size) / var(--whd-card-list-num-cols));
+}
+
+@media screen and (min-width: 480px) {
+  .story-list {
+    --whd-card-list-num-cols: 2;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .story-list {
+    --whd-card-list-num-cols: 3;
+  }
+}
+
+/**
+ * WHD Story Item
+ */
+.story-item {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  border: 3px solid #ccc;
+}
+
+.story-item__title {
+  margin-block-start: 1rem;
+  padding-inline: 1rem;
+  font-size: 1rem;
+}
+
+.story-item__images {
+  order: -1;
+}
+
+.story-item__profile {
+  padding-inline: 1rem;
+}

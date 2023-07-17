@@ -1,0 +1,45 @@
+uuid: fd71f23f-d5a8-41ce-bd95-0745211caa16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.story_list.field_stories
+    - field.field.paragraph.story_list.field_text
+    - field.field.paragraph.story_list.field_title
+    - paragraphs.paragraphs_type.story_list
+  module:
+    - text
+id: paragraph.story_list.default
+targetEntityType: paragraph
+bundle: story_list
+mode: default
+content:
+  field_stories:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

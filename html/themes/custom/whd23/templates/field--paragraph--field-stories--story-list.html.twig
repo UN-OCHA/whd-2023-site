@@ -36,10 +36,9 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('whd23/whd-images') }}
-
-<figure{{ attributes.addClass(['story-item__images', 'whd-images']) }}>
+{{ attach_library('whd23/whd-story-list') }}
+<ul role="list"{{ attributes.addClass('story-list') }}>
   {% for item in items %}
-    <div{{ item.attributes }}>{{ item.content }}</div>
+    <li{{ item.attributes }}>{{ item.content }}</li>
   {% endfor %}
-</figure>
+</ul>

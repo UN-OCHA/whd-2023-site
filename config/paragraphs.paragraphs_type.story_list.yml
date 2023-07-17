@@ -1,0 +1,10 @@
+uuid: 38759339-9e2b-4280-9012-5339568f5260
+langcode: en
+status: true
+dependencies: {  }
+id: story_list
+label: 'Story list'
+icon_uuid: null
+icon_default: null
+description: 'Use this to list Stories in a 3-column layout.'
+behavior_plugins: {  }

@@ -30,6 +30,11 @@ whd-images:
     component:
       components/whd-images/whd-images.css: {}
 
+whd-story-list:
+  css:
+    component:
+      components/whd-story-list/whd-story-list.css: {}
+
 whd-video:
   css:
     component:
