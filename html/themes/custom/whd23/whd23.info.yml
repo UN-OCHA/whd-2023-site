@@ -8,6 +8,7 @@ libraries:
   - core/normalize
   - whd23/global-styling
   - whd23/whd-header
+  - whd23/whd-footer
 
 # Historical metadata from theme creation
 generator: 'starterkit_theme:10.0.3'

@@ -25,6 +25,11 @@ cd-tabs:
 #####
 # WHD-specific components
 #
+whd-footer:
+  css:
+    component:
+      components/whd-footer/whd-footer.css: {}
+
 whd-header:
   css:
     component:

@@ -1,7 +1,8 @@
 /**
- * WHD-specific Page layout
+ * WHD Site footer
  */
-#main-content {
+
+.page-footer {
   max-width: var(--whd-content-max);
   margin: 0 auto;
 }

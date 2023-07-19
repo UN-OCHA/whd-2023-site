@@ -54,4 +54,6 @@
   --brand-primary--dark: var(--cd-blue--dark);
   --brand-highlight: #E56A54;
   --brand-grey: #E9F2FB;
+
+  --whd-content-max: 820px;
 }
