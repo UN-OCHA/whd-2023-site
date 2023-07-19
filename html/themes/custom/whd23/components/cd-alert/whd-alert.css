@@ -1,0 +1,7 @@
+/**
+ * WHD-specific customizations to alert messages
+ */
+.cd-alert {
+  max-width: var(--whd-content-max);
+  margin: 1rem auto;
+}

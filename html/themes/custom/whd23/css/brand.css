@@ -32,6 +32,18 @@
   --cd-font-size--2xlarge: 2.875rem;  /* 46px */
 
   /**
+   * Alert colors
+   */
+  --cd-red: #cd3a1f;
+  --cd-red--light: #f8d8d3;
+  --cd-orange: #db7b18;
+  --cd-orange--light: #fae6d1;
+  --cd-yellow: #d5de26;
+  --cd-yellow--light: #f7f8d3;
+  --cd-green: #7fb92f;
+  --cd-green--light: #e8f5d6;
+
+  /**
    * Fonts
    * https://brand.unocha.org/d/xEPytAUjC3sH/visual-identity#/basics/fonts/multi-language-typefaces-1
    */

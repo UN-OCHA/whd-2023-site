@@ -17,6 +17,13 @@ global-styling:
 #####
 # Completely unaltered CD components.
 #
+cd-alert:
+  css:
+    component:
+      components/cd-alert/cd-alert.css: {}
+    theme:
+      components/cd-alert/whd-alert.css: {}
+
 cd-tabs:
   css:
     component:
