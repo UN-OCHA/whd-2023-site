@@ -8,11 +8,7 @@ display:
       fields:
         changed:
           settings:
-            future_format: 'Dans @interval'
             past_format: 'Il y a @interval'
-      empty:
-        area_text_custom:
-          content: 'Aucun commentaire disponible.'
   block_1:
     display_title: Bloc
     display_options:

@@ -16,7 +16,6 @@ display:
       pager:
         options:
           tags:
-            next: 'التالي ›'
             previous: '‹ السابق'
           expose:
             items_per_page_options_all_label: '- الكل -'

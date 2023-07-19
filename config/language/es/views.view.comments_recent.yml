@@ -8,11 +8,7 @@ display:
       fields:
         changed:
           settings:
-            future_format: 'Desde hace @interval'
             past_format: 'Hace @interval'
-      empty:
-        area_text_custom:
-          content: 'No hay comentarios disponibles.'
   block_1:
     display_title: Bloque
     display_options:

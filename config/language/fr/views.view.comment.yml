@@ -29,7 +29,6 @@ display:
       pager:
         options:
           tags:
-            next: "suivant\_›"
             previous: "‹\_précédent"
             first: "«\_premier"
             last: "dernier\_»"
@@ -44,9 +43,6 @@ display:
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
           sort_desc_label: Desc
-      empty:
-        area_text_custom:
-          content: 'Aucun commentaire disponible.'
       filters:
         subject:
           expose:

@@ -31,7 +31,6 @@ display:
       pager:
         options:
           tags:
-            next: 'Suivant ›'
             previous: '‹ Précédent'
           expose:
             items_per_page_label: 'Éléments par page'
@@ -78,7 +77,6 @@ display:
       pager:
         options:
           tags:
-            next: 'Suivant ›'
             previous: '‹ Précédent'
           expose:
             items_per_page_label: 'Éléments par page'

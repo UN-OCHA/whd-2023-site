@@ -30,4 +30,5 @@ content:
     weight: 101
     region: content
 hidden:
+  body: true
   langcode: true

@@ -25,7 +25,6 @@ display:
         access:
           label: 'Последнее посещение'
           settings:
-            future_format: '@interval с этих пор'
             past_format: '@interval назад'
         operations:
           label: Операции

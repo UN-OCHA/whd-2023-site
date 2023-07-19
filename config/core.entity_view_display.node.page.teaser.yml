@@ -19,5 +19,6 @@ content:
     weight: 101
     region: content
 hidden:
+  body: true
   field_content: true
   langcode: true
