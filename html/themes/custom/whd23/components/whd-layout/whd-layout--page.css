@@ -1,3 +1,7 @@
 /**
  * WHD-specific Page layout
  */
+#main-content {
+  max-width: 820px;
+  margin: 0 auto;
+}

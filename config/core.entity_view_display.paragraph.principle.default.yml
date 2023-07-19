@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.principle.field_icon
     - field.field.paragraph.principle.field_text
     - field.field.paragraph.principle.field_title
-    - image.style.gallery_item
+    - image.style.principle_icon
     - paragraphs.paragraphs_type.principle
   module:
     - image
@@ -21,7 +21,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: gallery_item
+      image_style: principle_icon
       image_loading:
         attribute: lazy
     third_party_settings: {  }

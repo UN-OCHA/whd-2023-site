@@ -52,10 +52,10 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
-  minimal: 1000
+  standard: 1000
 theme:
   claro: 0
   stable: 0
   stable9: 0
   whd23: 0
-profile: minimal
+profile: standard

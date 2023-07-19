@@ -28,3 +28,10 @@
   flex: 0 0 200px;
   order: -1;
 }
+
+@media (min-width: 500px) {
+  /* alternate icon position when space allows */
+  .principles-list > li:nth-child(2n) .principle__icon {
+    order: 999;
+  }
+}
