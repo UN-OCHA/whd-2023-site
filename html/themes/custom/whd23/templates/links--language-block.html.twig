@@ -32,7 +32,7 @@
  */
 #}
 {% if links -%}
-<nav aria-label="{{ 'Language'|t }}">
+<nav class="language-switcher" aria-label="{{ 'Language'|t }}">
   <h2{{ create_attribute().addClass(['visually-hidden']) }}>{{ 'Languages'|t }}</h2>
   <ul{{ attributes }}>
     {%- for item in links -%}

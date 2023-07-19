@@ -9,7 +9,7 @@ dependencies:
 id: languages
 theme: whd23
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'language_block:language_interface'
 settings:

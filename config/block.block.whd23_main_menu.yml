@@ -13,7 +13,7 @@ _core:
 id: whd23_main_menu
 theme: whd23
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:

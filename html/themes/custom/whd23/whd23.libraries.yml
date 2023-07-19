@@ -25,6 +25,16 @@ cd-tabs:
 #####
 # WHD-specific components
 #
+whd-header:
+  css:
+    component:
+      components/whd-header/whd-header.css: {}
+  js:
+    components/whd-header/whd-header.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
 whd-images:
   css:
     component:

@@ -68,6 +68,27 @@ function whd23_preprocess_html(&$vars) {
 }
 
 /**
+ * Implements template_preprocess_page().
+ */
+function whd23_preprocess_page(&$variables) {
+  // Current language.
+  $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['current_language'] = $current_language;
+
+  // Add language to Drupal Settings for use in JS.
+  $variables['#attached']['drupalSettings']['language'] = $current_language;
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function whd23_preprocess_block(&$vars) {
+  // Current language available in template override.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK_alter().
  *
  * Incorporates the View Mode for each field. The suggestions will allow the
