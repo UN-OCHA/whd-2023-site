@@ -29,6 +29,7 @@ display:
       pager:
         options:
           tags:
+            next: 'следующая ›'
             previous: '‹ предыдущая'
             first: '« первая'
             last: 'последняя »'
@@ -43,6 +44,9 @@ display:
           exposed_sorts_label: 'Сортировать по'
           sort_asc_label: 'По возрастанию'
           sort_desc_label: 'По убыванию'
+      empty:
+        area_text_custom:
+          content: 'Комментарии отсутствуют.'
       filters:
         subject:
           expose:

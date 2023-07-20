@@ -28,6 +28,7 @@ display:
       pager:
         options:
           tags:
+            next: 'التالية ›'
             previous: '‹ السابقة'
             first: '« الأولى'
             last: 'الأخيرة »'
@@ -41,6 +42,9 @@ display:
           exposed_sorts_label: 'الترتيب حسب'
           sort_asc_label: تصاعدي
           sort_desc_label: تنازلي
+      empty:
+        area_text_custom:
+          content: 'لا تعليقات.'
       filters:
         subject:
           expose:

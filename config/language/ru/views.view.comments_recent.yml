@@ -8,7 +8,11 @@ display:
       fields:
         changed:
           settings:
+            future_format: '@interval с этих пор'
             past_format: '@interval назад'
+      empty:
+        area_text_custom:
+          content: 'Комментарии отсутствуют.'
   block_1:
     display_title: Блок
     display_options:

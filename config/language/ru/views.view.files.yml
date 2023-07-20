@@ -31,6 +31,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Следующий ›'
             previous: '‹ Предыдущий'
           expose:
             items_per_page_label: 'Элементов на страницу'
@@ -77,6 +78,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Следующий ›'
             previous: '‹ Предыдущий'
           expose:
             items_per_page_label: 'Элементов на страницу'

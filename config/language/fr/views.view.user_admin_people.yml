@@ -25,6 +25,7 @@ display:
         access:
           label: 'Dernier accès'
           settings:
+            future_format: 'Dans @interval'
             past_format: 'Il y a @interval'
         operations:
           label: Actions
@@ -33,6 +34,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Suivant ›'
             previous: '‹ Précédent'
             first: '« Premier'
             last: 'Dernier »'

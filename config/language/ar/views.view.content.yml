@@ -25,6 +25,7 @@ display:
       pager:
         options:
           tags:
+            next: 'التالي ›'
             previous: '‹ السابق'
       exposed_form:
         options:
