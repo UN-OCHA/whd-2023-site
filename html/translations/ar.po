@@ -1,0 +1,58 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "القائمة"
+
+msgid "World Humanitarian Day"
+msgstr "اليوم العالمي للعمل الإنساني"
+
+msgid "Learn and share"
+msgstr "تعلم وشارك"
+
+msgid "Partner resources"
+msgstr "محتوى للشركاء"
+
+#: templates/content/node--reference.html.twig
+msgid "The Origins"
+msgstr "الأصول"
+
+#: templates/book/book-navigation.html.twig
+msgid "See next profile"
+msgstr "انظر الملف التالي"
+
+msgid "Explore more profiles"
+msgstr "تعرّف على مزيد من الملفات"
+
+msgid "Profiles"
+msgstr "ملف"
+
+#: Onpage anchors
+msgid "about-campaign"
+msgstr "عن-الحملة"
+
+msgid "humanitarian-profiles"
+msgstr "مقتطفات-عن-الإنسانيين"
+
+msgid "partner-resources"
+msgstr "محتوى-للشركاء"
+
+msgid "about-whd"
+msgstr "عن-اليوم-العالمي-للعمل-الإنساني"
