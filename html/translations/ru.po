@@ -1,0 +1,58 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "Меню"
+
+msgid "World Humanitarian Day"
+msgstr "Всемирный день гуманитарной помощи"
+
+msgid "Learn and share"
+msgstr "Узнать больше и поделиться"
+
+msgid "Partner resources"
+msgstr "Ресурсы партнёров"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr "История создания"
+
+#: templates/book/book-navigation.html.twig
+msgid "See next profile"
+msgstr "Посмотреть про следующего гуманитарного работника"
+
+msgid "Explore more profiles"
+msgstr "Узнать больше"
+
+msgid "Profiles"
+msgstr "Кто такой гуманитарный работник"
+
+#: Onpage anchors
+msgid "about-campaign"
+msgstr "О-кампании"
+
+msgid "humanitarian-profiles"
+msgstr "Кто-такие-гуманитарные-работники"
+
+msgid "partner-resources"
+msgstr "Ресурсы-партнёров"
+
+msgid "about-whd"
+msgstr "О-Всемирном-дне-гуманитарной-помощи"

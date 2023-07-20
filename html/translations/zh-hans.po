@@ -1,0 +1,58 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "菜单"
+
+msgid "World Humanitarian Day"
+msgstr "世界人道主义日"
+
+msgid "Learn and share"
+msgstr "学习和分享"
+
+msgid "Partner resources"
+msgstr "合作伙伴资源"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr "起源"
+
+#: templates/book/book-navigation.html.twig
+msgid "See next profile"
+msgstr "查看下一个剪影"
+
+msgid "Explore more profiles"
+msgstr "探索更多资料剪影"
+
+msgid "Profiles"
+msgstr "剪影"
+
+#: Onpage anchors
+msgid "about-campaign"
+msgstr "关于 – 倡议活动"
+
+msgid "humanitarian-profiles"
+msgstr "人道主义概况"
+
+msgid "partner-resources"
+msgstr "合作伙伴资源"
+
+msgid "about-whd"
+msgstr "关于–世界人道主义日"

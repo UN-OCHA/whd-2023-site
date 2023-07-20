@@ -1,0 +1,58 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "Menu"
+
+msgid "World Humanitarian Day"
+msgstr "Journée mondiale de l’aide humanitaire"
+
+msgid "Learn and share"
+msgstr "Information et partage"
+
+msgid "Partner resources"
+msgstr "Ressources des Partenaires"
+
+#: templates/content/node--reference.html.twig:90
+msgid "The Origins"
+msgstr "Les origines de la Journée mondiale de l’aide humanitaire"
+
+#: templates/book/book-navigation.html.twig
+msgid "See next profile"
+msgstr "Voir le profil suivant"
+
+msgid "Explore more profiles"
+msgstr "Explorer d'autres profils"
+
+msgid "Profiles"
+msgstr "Profils"
+
+#: Onpage anchors
+msgid "about-campaign"
+msgstr "propos-campagne"
+
+msgid "humanitarian-profiles"
+msgstr "profils-humanitaires"
+
+msgid "partner-resources"
+msgstr "ressources-partenaires"
+
+msgid "about-whd"
+msgstr "propos-jmah"
