@@ -1,0 +1,46 @@
+uuid: 9f99c2c3-e2dd-4c17-b4bb-021737841ee5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_principles
+    - paragraphs.paragraphs_type.principle
+    - paragraphs.paragraphs_type.principles_list
+  module:
+    - entity_reference_revisions
+id: paragraph.principles_list.field_principles
+field_name: field_principles
+entity_type: paragraph
+bundle: principles_list
+label: Principles
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      principle: principle
+    negate: 0
+    target_bundles_drag_drop:
+      heading:
+        weight: -13
+        enabled: false
+      principle:
+        weight: -12
+        enabled: true
+      principles_list:
+        weight: -11
+        enabled: false
+      story_list:
+        weight: -10
+        enabled: false
+      text:
+        weight: -9
+        enabled: false
+      video:
+        weight: -8
+        enabled: false
+field_type: entity_reference_revisions

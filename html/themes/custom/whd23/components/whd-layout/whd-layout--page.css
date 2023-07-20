@@ -1,0 +1,7 @@
+/**
+ * WHD-specific Page layout
+ */
+#main-content {
+  max-width: var(--whd-content-max);
+  margin: 0 auto;
+}

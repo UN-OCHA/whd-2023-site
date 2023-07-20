@@ -1,16 +1,35 @@
-uuid: a0dde013-3f0e-4c0a-9dbc-7689935d777e
+uuid: ea98cc14-de22-4ef9-83cd-12905e378fcf
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.basic_html
   module:
-    - media
+    - comment
+    - contact
+    - filter
+    - paragraphs_type_permissions
+    - search
+    - shortcut
     - system
 _core:
-  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
 label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
-  - 'view media'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view paragraph content heading'
+  - 'view paragraph content principle'
+  - 'view paragraph content principles_list'
+  - 'view paragraph content story_list'
+  - 'view paragraph content text'
+  - 'view paragraph content video'

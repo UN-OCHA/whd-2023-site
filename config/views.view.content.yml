@@ -1,4 +1,4 @@
-uuid: d64717a9-db2d-49e3-9cd7-a83f31dd62cd
+uuid: d16fae7a-5101-44f2-a4cd-d39685fd43ca
 langcode: en
 status: true
 dependencies:
@@ -187,6 +187,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         operations:
           id: operations
           table: node

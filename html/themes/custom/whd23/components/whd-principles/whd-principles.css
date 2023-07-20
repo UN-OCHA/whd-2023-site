@@ -1,0 +1,37 @@
+/**
+ * Humanitarian Principles list
+ */
+
+.principles-list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+/**
+ * Humanitarian Principles item
+ */
+
+.principle {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+@media (min-width: 500px) {
+  .principle {
+    flex-direction: row;
+  }
+}
+
+.principle__icon {
+  flex: 0 0 200px;
+  order: -1;
+}
+
+@media (min-width: 500px) {
+  /* alternate icon position when space allows */
+  .principles-list > li:nth-child(2n) .principle__icon {
+    order: 999;
+  }
+}

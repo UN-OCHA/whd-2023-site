@@ -1,0 +1,105 @@
+label: 评论
+description: 查找和管理评论。
+display:
+  default:
+    display_title: 默认
+    display_options:
+      title: 评论
+      fields:
+        comment_bulk_form:
+          action_title: 动作
+        subject:
+          label: 主题
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: 作者
+          separator: ', '
+        entity_id:
+          label: 发布于
+          separator: ', '
+        changed:
+          label: 已更新
+          separator: ', '
+        operations:
+          label: 操作
+        name_1:
+          separator: ', '
+      pager:
+        options:
+          tags:
+            next: '下一页 ›'
+            previous: '‹ 上一页'
+            first: '« 第一页'
+            last: '末页 »'
+          expose:
+            items_per_page_label: 每页条目数
+            items_per_page_options_all_label: '- 全部 -'
+            offset_label: 偏移量
+      exposed_form:
+        options:
+          submit_button: 过滤
+          reset_button_label: 重置
+          exposed_sorts_label: 排序依据
+          sort_asc_label: 升序
+          sort_desc_label: 降序
+      empty:
+        area_text_custom:
+          content: 没有评论。
+      filters:
+        subject:
+          expose:
+            label: 主题
+        combine:
+          expose:
+            label: 作者名
+        langcode:
+          expose:
+            label: 语言
+      use_more_text: 更多
+  page_published:
+    display_title: 已发布的评论
+    display_options:
+      display_description: 已被审核的评论清单。
+      menu:
+        title: 评论
+        description: 已发布的评论。
+  page_unapproved:
+    display_title: 未批准的评论
+    display_options:
+      fields:
+        comment_bulk_form:
+          action_title: 动作
+        subject:
+          label: 主题
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: 作者
+          separator: ', '
+        entity_id:
+          label: 发布于
+          separator: ', '
+        changed:
+          label: 已更新
+          separator: ', '
+        operations:
+          label: 操作
+        name_1:
+          separator: ', '
+      filters:
+        subject:
+          expose:
+            label: 主题
+        combine:
+          expose:
+            label: 作者名字
+        langcode:
+          expose:
+            label: 语言
+      display_description: 未审核的评论清单。
+      menu:
+        title: 未批准的评论
+        description: 未许可的评论

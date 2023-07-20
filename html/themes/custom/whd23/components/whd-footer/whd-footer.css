@@ -1,0 +1,8 @@
+/**
+ * WHD Site footer
+ */
+
+.page-footer {
+  max-width: var(--whd-content-max);
+  margin: 0 auto;
+}
