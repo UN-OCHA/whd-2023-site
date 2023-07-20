@@ -8,6 +8,7 @@ display:
       fields:
         changed:
           settings:
+            future_format: '@interval 后'
             past_format: '@interval 前'
       empty:
         area_text_custom:

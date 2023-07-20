@@ -29,6 +29,7 @@ display:
       pager:
         options:
           tags:
+            next: 'siguiente ›'
             previous: '‹ anterior'
             first: '« primero'
             last: 'último »'
@@ -43,6 +44,9 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
           sort_desc_label: Desc
+      empty:
+        area_text_custom:
+          content: 'No hay comentarios disponibles.'
       filters:
         subject:
           expose:

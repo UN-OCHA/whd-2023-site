@@ -16,6 +16,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Siguiente >'
             previous: '‹ Anterior'
           expose:
             items_per_page_label: 'Elementos por página'

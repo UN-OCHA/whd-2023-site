@@ -25,6 +25,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Suivant ›'
             previous: '‹ Précédent'
             first: '« Premier'
             last: 'Dernier »'

@@ -1,7 +1,9 @@
+label: 'Blocs de contenu'
 display:
   default:
     display_title: 'Par défaut'
     display_options:
+      title: 'Blocs de contenu'
       fields:
         info:
           label: 'Description du bloc'
@@ -16,6 +18,7 @@ display:
       pager:
         options:
           tags:
+            next: 'Suivant ›'
             previous: '‹ Précédent'
           expose:
             items_per_page_label: 'Éléments par page'
@@ -40,3 +43,4 @@ display:
     display_options:
       menu:
         title: Blocs
+        description: 'Créer et modifier les blocs de contenu.'
