@@ -55,7 +55,7 @@ done
 # Stop and remove the containers.
 if [ "$shutdown" = "yes" ]; then
   echo "Stop and remove the containers."
-  PROXY=$proxy_name docker-compose -p starterkit-local -f local/docker-compose.yml down $shutdown_options || true
+  PROXY=$proxy_name docker-compose -p whd-local -f local/docker-compose.yml down $shutdown_options || true
   exit 0
 fi
 
@@ -68,11 +68,11 @@ fi;
 
 # Create the site, memcache and mysql containers.
 echo "Create the site, memcache and mysql containers."
-PROXY=$proxy_name docker-compose -p starterkit-local -f local/docker-compose.yml up -d
+PROXY=$proxy_name docker-compose -p whd-local -f local/docker-compose.yml up -d
 
 # Dump some information about the created containers.
 echo "Dump some information about the created containers."
-docker ps -a -fname=starterkit-local
+docker ps -a -fname=whd-local
 
 # Wait a bit for memcache and mysql to be ready.
 echo "Wait a bit for memcache and mysql to be ready."
@@ -82,21 +82,21 @@ sleep 10
 if [ "$install_site" = "yes" ]; then
   # Ensure the file directories are writable.
   echo "Ensure the file directories are writable."
-  docker exec -it starterkit-local-site chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
+  docker exec -it whd-local-site chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
 
   # Install the dev dependencies.
   echo "Install the common design subtheme if not present already"
-  docker exec -it -w /srv/www starterkit-local-site composer run sub-theme
+  docker exec -it -w /srv/www whd-local-site composer run sub-theme
 
   # Install the site with the existing config.
   if [ "$use_existing_config" = "yes" ]; then
     echo "Install the site with the existing config."
-    docker exec -it starterkit-local-site drush -y si --existing-config minimal install_configure_form.enable_update_status_emails=NULL
+    docker exec -it whd-local-site drush -y si --existing-config minimal install_configure_form.enable_update_status_emails=NULL
   else
     echo "Install the site from scratch."
-    docker exec -it starterkit-local-site drush -y si minimal install_configure_form.enable_update_status_emails=NULL
+    docker exec -it whd-local-site drush -y si minimal install_configure_form.enable_update_status_emails=NULL
   fi
 
   # Import the configuration.
-  docker exec -it starterkit-local-site drush -y cim
+  docker exec -it whd-local-site drush -y cim
 fi
