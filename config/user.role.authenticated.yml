@@ -28,6 +28,7 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view paragraph content heading'
+  - 'view paragraph content hero_image'
   - 'view paragraph content principle'
   - 'view paragraph content principles_list'
   - 'view paragraph content story_list'

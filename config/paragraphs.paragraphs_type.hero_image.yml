@@ -1,0 +1,10 @@
+uuid: 9305ccc0-8a38-49c6-93b0-345f266dbdaf
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero Image'
+icon_uuid: null
+icon_default: null
+description: "Use this in place of a video if it hasn't arrived yet."
+behavior_plugins: {  }
