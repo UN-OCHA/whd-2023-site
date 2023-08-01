@@ -162,7 +162,8 @@
   right: 0;
   left: 0;
   padding: 2rem 1rem;
-  transition: transform 0.1666s ease-in-out;
+  transition: 0.1666s ease-in-out;
+  transition-property: transform, visibility;
   transform: translateY(-100%);
   text-align: center;
   color: white;
