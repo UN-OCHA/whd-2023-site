@@ -10,22 +10,14 @@ display:
           action_title: Acción
         subject:
           label: Asunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: 'Enviado en'
-          separator: ', '
         changed:
           label: Actualizado
-          separator: ', '
         operations:
           label: Operaciones
-        name_1:
-          separator: ', '
       pager:
         options:
           tags:
@@ -42,8 +34,6 @@ display:
           submit_button: Filtro
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
       empty:
         area_text_custom:
           content: 'No hay comentarios disponibles.'
@@ -73,22 +63,14 @@ display:
           action_title: Acción
         subject:
           label: Asunto
-          separator: ', '
-        uid:
-          separator: ', '
         name:
           label: Autor
-          separator: ', '
         entity_id:
           label: 'Enviado en'
-          separator: ', '
         changed:
           label: Actualizado
-          separator: ', '
         operations:
           label: Operaciones
-        name_1:
-          separator: ', '
       filters:
         subject:
           expose:

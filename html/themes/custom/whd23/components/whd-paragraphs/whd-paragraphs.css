@@ -1,0 +1,39 @@
+/**
+ * WHD general paragraphs
+ */
+
+/* All paragraphs are full-bleed, but restrict their inner content width to a
+specified limit. These settings allow paragraphs to take on background colors
+while keeping the content readable. */
+.paragraph {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.paragraph > * {
+  width: var(--whd-content-max);
+  max-width: 100%;
+  padding-inline: 1rem;
+}
+
+/* No matter which paragraph they appear inside, restrict title/text fields to
+a max-width suitable for long-form copy. */
+.paragraph__title,
+.paragraph__text {
+  width: var(--whd-text-max);
+}
+
+.paragraph__title {
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+  text-align: center;
+}
+
+.paragraph__text p {
+  margin-block: 0;
+}
+
+.paragraph__text p + p {
+  margin-block-start: 1rem;
+}

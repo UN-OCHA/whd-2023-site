@@ -3,6 +3,47 @@
  */
 
 .page-footer {
+  /* layout */
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  /* other */
+  margin-block-start: 4rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--cd-white);
+  background-color: var(--brand-primary);
+  font-size: clamp(.8125em, 2vw, 1em);
+}
+
+.page-footer > * {
   max-width: var(--whd-content-max);
-  margin: 0 auto;
+}
+
+.page-footer__logo {
+  margin-block: 2rem;
+  width: 300px;
+  max-width: 80%;
+}
+
+.page-footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.page-footer__nav > * {
+  flex: 0 0 auto;
+}
+
+.page-footer__nav a {
+  text-transform: uppercase;
+  color: var(--cd-white);
+}
+
+.page-footer__nav a:focus-visible {
+  outline: 3px solid var(--brand-primary--light);
+  outline-offset: 3px;
 }
