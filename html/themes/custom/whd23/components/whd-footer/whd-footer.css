@@ -3,6 +3,24 @@
  */
 
 .page-footer {
+  /* layout */
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  /* other */
+  margin-block-start: 4rem;
+  padding: 2rem;
+  color: var(--cd-white);
+  background-color: var(--brand-primary);
+}
+
+.page-footer > * {
   max-width: var(--whd-content-max);
-  margin: 0 auto;
+}
+
+.page-footer__logo {
+  margin-block: 2rem;
+  width: 300px;
+  max-width: 80%;
 }

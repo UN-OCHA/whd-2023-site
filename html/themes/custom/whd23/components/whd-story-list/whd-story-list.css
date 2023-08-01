@@ -30,6 +30,10 @@
   }
 }
 
+.paragraph--type--story-list .paragraph__text {
+  text-align: center;
+}
+
 /**
  * WHD Story Item
  */

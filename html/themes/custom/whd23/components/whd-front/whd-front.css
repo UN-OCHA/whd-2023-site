@@ -45,6 +45,6 @@
 
   padding-block-start: 3rem;
   color: var(--cd-white);
-  background: linear-gradient(to bottom, var(--cd-blue--ocha), var(--cd-blue--ocha) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
+  background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
   font-size: 1.25em;
 }

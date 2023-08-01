@@ -23,3 +23,17 @@ a max-width suitable for long-form copy. */
 .paragraph__text {
   width: var(--whd-text-max);
 }
+
+.paragraph__title {
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+  text-align: center;
+}
+
+.paragraph__text p {
+  margin-block: 0;
+}
+
+.paragraph__text p + p {
+  margin-block-start: 1rem;
+}

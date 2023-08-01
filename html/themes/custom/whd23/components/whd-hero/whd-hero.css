@@ -11,3 +11,7 @@
 .paragraph--type--hero-image .paragraph__text {
   width: var(--whd-content-max);
 }
+
+.paragraph--type--hero-image .paragraph__text {
+  margin-block: 2rem;
+}
