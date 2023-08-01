@@ -4,6 +4,13 @@
 .video {
   aspect-ratio: 4 / 3;
   position: relative;
+
+  /* override paragraph defaults for visual padding */
+  width: calc(var(--whd-content-max) - 2rem);
+  max-width: calc(100% - 2rem);
+  padding: 0;
+  margin-inline: 1rem;
+  background: #000;
 }
 
 .video__link {
@@ -32,4 +39,23 @@
 .video__iframe {
   width: 100%;
   height: 100%;
+}
+
+
+/**
+ * Text treatment
+ */
+
+.paragraph--type--video {
+  padding-block-end: 4rem;
+}
+
+/* override paragraph defaults for the title/text fields */
+.paragraph--type--video .paragraph__title,
+.paragraph--type--video .paragraph__text {
+  width: var(--whd-content-max);
+}
+
+.paragraph--type--video .paragraph__text {
+  margin-block: 2rem;
 }
