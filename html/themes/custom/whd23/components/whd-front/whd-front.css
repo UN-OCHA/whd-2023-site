@@ -1,0 +1,50 @@
+/**
+ * WHD Front page
+ */
+
+.path-frontpage .slogan {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.path-frontpage .slogan__text {
+  width: var(--whd-content-max);
+  max-width: 100%;
+  margin-block-start: .5em;
+  margin-block-end: -.25em;
+  /* font differences mean manual alignment of slogan is necessary */
+  margin-inline-start: -7px;
+  font-size: 3.6em;
+  font-size: clamp(2rem, 10vw, 3.6em);
+  font-weight: 700;
+  padding-inline: 1rem;
+}
+
+.path-frontpage #block-whd23-page-title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.path-frontpage #block-whd23-page-title h1 {
+  width: var(--whd-content-max);
+  max-width: 100%;
+  margin: 0;
+  margin-block-end: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-size: clamp(1rem, 4.4vw, 1.6em);
+  font-weight: 400;
+  padding-inline: 1rem;
+}
+
+.path-frontpage .field-content__paragraph:first-child {
+  --whd-front-color-stop: 18rem;
+
+  padding-block-start: 3rem;
+  color: var(--cd-white);
+  background: linear-gradient(to bottom, var(--cd-blue--ocha), var(--cd-blue--ocha) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
+  font-size: 1.25em;
+}

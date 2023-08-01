@@ -32,6 +32,16 @@ cd-tabs:
 #####
 # WHD-specific components
 #
+whd-hero:
+  css:
+    component:
+      components/whd-hero/whd-hero.css: {}
+
+whd-front:
+  css:
+    component:
+      components/whd-front/whd-front.css: {}
+
 whd-footer:
   css:
     component:
@@ -51,6 +61,11 @@ whd-images:
   css:
     component:
       components/whd-images/whd-images.css: {}
+
+whd-paragraphs:
+  css:
+    component:
+      components/whd-paragraphs/whd-paragraphs.css: {}
 
 whd-principles:
   css:

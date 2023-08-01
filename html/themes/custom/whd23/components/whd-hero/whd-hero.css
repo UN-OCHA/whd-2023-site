@@ -1,0 +1,13 @@
+/**
+ * WHD Hero image
+ */
+
+.paragraph--type--hero-image {
+  padding-block-end: 4rem;
+}
+
+/* override paragraph defaults for the title/text fields */
+.paragraph--type--hero-image .paragraph__title,
+.paragraph--type--hero-image .paragraph__text {
+  width: var(--whd-content-max);
+}
