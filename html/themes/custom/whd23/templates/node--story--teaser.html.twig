@@ -73,6 +73,8 @@
   {% if label and not page %}
     <h2{{ title_attributes.addClass(['story-item__title']) }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      <br>
+      <span class="story-item__subtitle">{{ 'Survivor'|t }}</span>
     </h2>
   {% endif %}
   {{ title_suffix }}
@@ -90,4 +92,7 @@
   {{ content.field_images }}
   <p class="story-item__profile">{{ content.field_survivor_profile|render|striptags|trim }}</p>
 
+  <div class="story-item__link">
+    <a href="{{ url }}">{{ 'Read full interview'|t }}</a>
+  </div>
 </article>

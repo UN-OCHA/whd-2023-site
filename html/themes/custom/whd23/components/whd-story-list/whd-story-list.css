@@ -4,14 +4,15 @@
 
 :root {
   --whd-card-list-num-cols: 1;
-  --whd-card-list-gap-size: 1.5rem;
+  --whd-card-list-gap-size: 1rem;
+  --whd-card-list-color-stop: 60%;
 }
 
 .story-list {
   display: flex;
   flex-flow: row wrap;
-  gap: var(--whd-card-list-gap-size);
   margin-block: 2rem;
+  padding-inline: 0;
 }
 
 .story-list > * {
@@ -21,6 +22,9 @@
 @media screen and (min-width: 480px) {
   .story-list {
     --whd-card-list-num-cols: 2;
+
+    gap: var(--whd-card-list-gap-size);
+    padding-inline: var(--whd-card-list-gap-size);
   }
 }
 
@@ -35,25 +39,117 @@
 }
 
 /**
+ * Color treatment for mobile.
+ *
+ * There's an alternating color treatment that spans across the elements
+ * themselves, but it disappears once the columns kick in.
+ */
+
+@media screen and (max-width: 480px) {
+  .story-list > *:nth-child(odd) {
+    background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) 40%, var(--brand-primary) 40%, var(--brand-primary));
+  }
+
+  .story-list > *:nth-child(odd) .story-item__profile {
+    color: var(--cd-white);
+  }
+
+  .story-list > *:nth-child(even) {
+    background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) 40%, var(--cd-white) 40%, var(--cd-white));
+  }
+
+  .story-list > *:nth-child(even) .story-item__title a,
+  .story-list > *:nth-child(even) .story-item__subtitle {
+    color: var(--cd-white);
+  }
+
+  .story-list > *:nth-child(even) .story-item__link a {
+    color: var(--cd-white);
+    background: var(--brand-primary);
+  }
+
+  .story-item__title.story-item__title {
+    margin-block-start: 4rem;
+  }
+}
+
+/**
+ * Color treatment for wider screens
+ */
+@media screen and (min-width: 480px) {
+  .paragraph--type--story-list {
+    background: linear-gradient(to top, var(--brand-primary), var(--brand-primary) var(--whd-card-list-color-stop), var(--cd-white) var(--whd-card-list-color-stop), var(--cd-white));
+  }
+}
+
+
+/**
  * WHD Story Item
  */
 .story-item {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  border: 3px solid #ccc;
+  padding-bottom: 3rem; /* leave room for positioned links */
+  text-align: center;
 }
 
 .story-item__title {
-  margin-block-start: 1rem;
+  order: -1;
+  margin-block: 1rem;
   padding-inline: 1rem;
   font-size: 1rem;
 }
 
+.story-item__title a {
+  color: var(--cd-black);
+}
+
+.story-item__subtitle {
+  font-weight: 400;
+}
+
 .story-item__images {
-  order: -1;
+  margin-inline: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .story-item__images {
+    margin-inline: 0;
+  }
 }
 
 .story-item__profile {
   padding-inline: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .story-item__profile {
+    padding-inline: 0;
+    color: var(--cd-white);
+  }
+}
+
+.story-item__profile::before {
+  content: '"';
+}
+
+.story-item__profile::after {
+  content: '"';
+}
+
+.story-item__link {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.story-item__link a {
+  display: inline-block;
+  padding: .5rem 1rem;
+  white-space: nowrap;
+  color: var(--brand-primary);
+  background: var(--cd-white);
 }
