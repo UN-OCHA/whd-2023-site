@@ -11,8 +11,10 @@
   /* other */
   margin-block-start: 4rem;
   padding: 2rem;
+  text-align: center;
   color: var(--cd-white);
   background-color: var(--brand-primary);
+  font-size: clamp(.8125em, 2vw, 1em);
 }
 
 .page-footer > * {

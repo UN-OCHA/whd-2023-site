@@ -23,6 +23,12 @@ body {
   line-height: 1.5;
 }
 
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 body.no-scroll {
   position: fixed;
   overflow: hidden;
