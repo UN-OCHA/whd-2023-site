@@ -31,7 +31,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .page-footer__nav > * {
@@ -39,11 +39,14 @@
 }
 
 .page-footer__nav a {
+  padding: 6px;
   text-transform: uppercase;
   color: var(--cd-white);
 }
 
 .page-footer__nav a:focus-visible {
-  outline: 3px solid var(--brand-primary--light);
-  outline-offset: 3px;
+  text-decoration: none;
+  color: var(--brand-primary);
+  outline: none;
+  background: var(--cd-white);
 }

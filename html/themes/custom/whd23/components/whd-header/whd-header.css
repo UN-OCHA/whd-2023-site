@@ -80,8 +80,17 @@
 }
 
 .whd-site-logo:focus-visible {
-  outline: 3px solid var(--whd-header-ui-color);
-  outline-offset: 3px;
+  outline: none;
+  background: var(--whd-header-ui-color);
+}
+
+.whd-site-logo svg {
+  fill: var(--whd-header-ui-color);
+}
+
+.whd-site-logo:focus-visible svg {
+  outline: 4px solid var(--whd-header-ui-color);
+  fill: var(--whd-header-bg-color);
 }
 
 /**
@@ -113,7 +122,9 @@
 }
 
 .language-switcher .links a:focus-visible {
-  outline: 3px solid var(--whd-header-ui-color);
+  color: var(--whd-header-bg-color);
+  outline: none;
+  background: var(--whd-header-ui-color);
 }
 
 @media screen and (min-width: 576px) {
@@ -203,6 +214,7 @@
   transform: translateY(-100%);
   text-align: center;
   color: white;
+  border-bottom: 4px solid var(--cd-black);
   background: var(--brand-primary);
   will-change: transform;
 }

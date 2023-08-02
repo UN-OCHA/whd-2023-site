@@ -16,10 +16,9 @@
   --whd-header-bg-color: var(--brand-primary);
 }
 
-.page-node-type-story .whd-site-logo svg {
-  fill: var(--cd-white);
-}
-
+/**
+ * Page contents
+ */
 .survivor-story__pretitle {
   margin-block-start: 4rem;
   margin-block-end: 0;
