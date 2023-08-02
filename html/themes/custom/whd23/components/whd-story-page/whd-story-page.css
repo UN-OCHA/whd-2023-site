@@ -1,0 +1,12 @@
+/**
+ * WHD Story details page
+ */
+
+.page-node-type-story .whd-header {
+  --whd-header-ui-color: var(--cd-white);
+  --whd-header-bg-color: var(--brand-primary);
+}
+
+.page-node-type-story .whd-site-logo svg {
+  fill: var(--cd-white);
+}

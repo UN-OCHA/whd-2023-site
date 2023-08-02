@@ -1,6 +1,12 @@
 /**
  * Global page header
  */
+
+:root {
+  --whd-header-ui-color: var(--cd-black);
+  --whd-header-bg-color: var(--cd-white);
+}
+
 .whd-header {
   display: flex;
   flex-wrap: wrap;
@@ -8,8 +14,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 0.5rem;
-  color: black;
-  background-color: white;
+  color: var(--whd-header-ui-color);
+  background-color: var(--whd-header-bg-color);
 }
 
 @media screen and (min-width: 576px) {
@@ -73,6 +79,10 @@
   }
 }
 
+.whd-site-logo:focus-visible {
+  outline: 3px solid var(--whd-header-ui-color);
+  outline-offset: 3px;
+}
 
 /**
  * Language switcher
@@ -98,12 +108,12 @@
 
 .language-switcher .links a {
   padding: 0.5rem;
-  color: black;
+  color: var(--whd-header-ui-color);
   font-size: 0.75rem;
 }
 
 .language-switcher .links a:focus-visible {
-  outline: 3px solid var(--brand-primary);
+  outline: 3px solid var(--whd-header-ui-color);
 }
 
 @media screen and (min-width: 576px) {
@@ -139,6 +149,7 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
+  color: var(--whd-header-ui-color);
   border: 0;
   background: transparent;
   font-size: 2rem;

@@ -77,6 +77,11 @@ whd-story-list:
     component:
       components/whd-story-list/whd-story-list.css: {}
 
+whd-story-page:
+  css:
+    component:
+      components/whd-story-page/whd-story-page.css: {}
+
 whd-video:
   css:
     component:
