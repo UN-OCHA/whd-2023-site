@@ -39,6 +39,6 @@
 {{ attach_library('whd23/whd-principles') }}
 <ul role="list"{{ attributes.addClass('principles-list') }}>
   {% for item in items %}
-    <li{{ item.attributes }}>{{ item.content }}</li>
+    {{ item.content }}
   {% endfor %}
 </ul>

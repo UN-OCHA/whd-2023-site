@@ -1,3 +1,21 @@
 /**
  * WHD page layout
  */
+
+#block-whd23-page-title {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#block-whd23-page-title h1 {
+  width: var(--whd-content-max);
+  max-width: 100%;
+  text-align: center;
+  text-wrap: balance;
+  font-size: 3.2rem;
+  font-size: clamp(1.6rem, 7vw, 3.2rem);
+  font-weight: 700;
+  margin-block: 2rem;
+  padding-inline: 1rem;
+}

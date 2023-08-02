@@ -40,15 +40,11 @@
 #}
 {%
   set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
     'principle',
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <li{{ attributes.addClass(classes) }}>
     {% block content %}
       <div class="principle__content">
         <h3>{{ content.field_title|render|striptags|trim }}</h3>
@@ -56,5 +52,5 @@
       </div>
       <div class="principle__icon">{{ content.field_icon }}</div>
     {% endblock %}
-  </div>
+  </li>
 {% endblock paragraph %}

@@ -22,6 +22,7 @@ a max-width suitable for long-form copy. */
 .paragraph__title,
 .paragraph__text {
   width: var(--whd-text-max);
+  max-width: 100%;
 }
 
 .paragraph__title {
