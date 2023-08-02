@@ -36,9 +36,6 @@
  * @see template_preprocess_field()
  */
 #}
-{{ attach_library('whd23/whd-principles') }}
-<ul role="list"{{ attributes.addClass('principles-list') }}>
-  {% for item in items %}
-    {{ item.content }}
-  {% endfor %}
-</ul>
+{% for item in items %}
+  <p{{ attributes.addClass('survivor-story__profile') }}>{{ item.content }}</p>
+{% endfor %}

@@ -58,4 +58,5 @@
 
 .paragraph--type--video .paragraph__text {
   margin-block: 2rem;
+  text-wrap: balance;
 }

@@ -26,6 +26,7 @@ body {
 @media (min-width: 1024px) {
   body {
     font-size: 1.125rem;
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
   }
 }
 

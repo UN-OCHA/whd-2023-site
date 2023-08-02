@@ -14,4 +14,5 @@
 
 .paragraph--type--hero-image .paragraph__text {
   margin-block: 2rem;
+  text-wrap: balance;
 }
