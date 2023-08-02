@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem 0.5rem;
   color: black;
   background-color: white;
@@ -60,9 +61,16 @@
   display: block;
   width: var(--whd-logo-width);
   height: calc(var(--whd-logo-width) / var(--whd-logo-aspect-ratio));
+  margin-inline-end: calc(2rem + 36px);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
+}
+
+@media screen and (min-width: 342px) {
+  .whd-site-logo {
+    margin-inline-end: 0;
+  }
 }
 
 
@@ -70,12 +78,12 @@
  * Language switcher
  */
 .language-switcher {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 
 .language-switcher .links {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   height: 36px; /* matching hamburger button height */
@@ -101,7 +109,6 @@
 @media screen and (min-width: 576px) {
   .language-switcher .links {
     justify-content: flex-end;
-    padding-inline: 2rem;
   }
 }
 
@@ -124,8 +131,9 @@
 }
 
 .main-nav__toggle {
-  position: relative;
+  position: absolute;
   z-index: 10;
+  top: 1rem;
   width: 36px;
   height: 32px;
   margin: 0;
@@ -134,6 +142,14 @@
   border: 0;
   background: transparent;
   font-size: 2rem;
+}
+
+[dir="ltr"] .main-nav__toggle {
+  right: 1rem;
+}
+
+[dir="rtl"] .main-nav__toggle {
+  left: 1rem;
 }
 
 .main-nav__toggle__symbol {
@@ -147,6 +163,15 @@
 
 .no-js .main-nav__toggle {
   display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .main-nav__toggle {
+    position: relative;
+    top: unset;
+    right: unset;
+    left: unset;
+  }
 }
 
 .main-nav__contents {
@@ -178,7 +203,7 @@
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.8;
+  line-height: 1.2;
 }
 .no-js .main-nav__contents a {
   color: black;
@@ -191,6 +216,7 @@
 }
 
 .main-nav__contents li {
+  margin-block-end: 1rem;
   padding-inline-end: 3rem;
 }
 
