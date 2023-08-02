@@ -61,9 +61,9 @@
    *
    * Unlike CD, override the values directly in this section:
    */
-  --brand-primary: var(--cd-blue--ocha);
-  --brand-primary--light: var(--cd-blue--bright);
-  --brand-primary--dark: var(--cd-blue--dark);
+  --brand-primary: #007fad;
+  --brand-primary--light: #20afcd;
+  --brand-primary--dark: #004f8d;
   --brand-highlight: #e56a54;
   --brand-grey: #e9f2fb;
   --whd-content-max: 1090px;
