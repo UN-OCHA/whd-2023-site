@@ -70,7 +70,3 @@
 .page-node-type-story .whd-images *:nth-child(3) {
   transform: translate(8%, 12%) rotate(6deg) scale(1.12);
 }
-
-.page-node-type-story .whd-images img {
-  border: 3px solid black;
-}
