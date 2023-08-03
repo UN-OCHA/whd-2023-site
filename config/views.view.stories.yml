@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.views_teaser
     - node.type.story
+    - system.menu.main
   module:
     - node
     - user
@@ -218,6 +219,15 @@ display:
     display_options:
       display_extenders: {  }
       path: survivor-stories
+      menu:
+        type: normal
+        title: 'Survivor Stories'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
