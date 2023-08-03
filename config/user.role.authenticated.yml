@@ -27,6 +27,7 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'view paragraph content button'
   - 'view paragraph content heading'
   - 'view paragraph content hero_image'
   - 'view paragraph content principle'
