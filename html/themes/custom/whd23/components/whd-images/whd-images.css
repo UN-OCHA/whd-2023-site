@@ -6,11 +6,12 @@
 .whd-images {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
   gap: 1rem;
 }
 
 .whd-images > * {
-  flex: 1 1 auto;
+  flex: 0 1 353px;
 }
