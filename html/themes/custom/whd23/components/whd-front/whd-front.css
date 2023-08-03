@@ -9,8 +9,8 @@
 }
 
 .path-frontpage .slogan__text {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   margin-block-start: .5em;
   margin-block-end: -.25em;
   /* font differences mean manual alignment of slogan is necessary */
@@ -28,8 +28,8 @@
 }
 
 .path-frontpage #block-whd23-page-title h1 {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   margin: 0;
   margin-block-end: 2rem;
   text-align: initial;

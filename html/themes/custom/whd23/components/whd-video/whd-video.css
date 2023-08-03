@@ -53,7 +53,8 @@
 /* override paragraph defaults for the title/text fields */
 .paragraph--type--video .paragraph__title,
 .paragraph--type--video .paragraph__text {
-  width: var(--whd-content-max);
+  width: 100%;
+  max-width: var(--whd-content-max);
 }
 
 .paragraph--type--video .paragraph__text {

@@ -48,8 +48,8 @@
 }
 
 .page-node-type-story .whd-images {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   margin-inline: auto;
   margin-block: 7rem;
 }
