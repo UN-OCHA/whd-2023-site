@@ -5,7 +5,7 @@
 :root {
   --whd-card-list-num-cols: 1;
   --whd-card-list-gap-size: 1rem;
-  --whd-card-list-color-stop: 60%;
+  --whd-card-list-color-stop: 320px;
 }
 
 .story-list {
@@ -19,18 +19,29 @@
   flex: 0 1 calc((100% / var(--whd-card-list-num-cols)) - var(--whd-card-list-gap-size) + var(--whd-card-list-gap-size) / var(--whd-card-list-num-cols));
 }
 
+/* Two-col */
 @media screen and (min-width: 480px) {
   .story-list {
     --whd-card-list-num-cols: 2;
 
-    gap: var(--whd-card-list-gap-size);
+    gap: calc(4 * var(--whd-card-list-gap-size)) var(--whd-card-list-gap-size);
     padding-inline: var(--whd-card-list-gap-size);
+  }
+
+  .story-list > *:nth-child(1n + 3) .story-item__title {
+    color: var(--cd-white);
   }
 }
 
+/* Three-col */
 @media screen and (min-width: 750px) {
   .story-list {
     --whd-card-list-num-cols: 3;
+  }
+
+  /* Re-color the third item now that we have a new layout */
+  .story-list > *:nth-child(3) .story-item__title {
+    color: var(--cd-black);
   }
 }
 
@@ -78,7 +89,7 @@
  */
 @media screen and (min-width: 480px) {
   .paragraph--type--story-list {
-    background: linear-gradient(to top, var(--brand-primary), var(--brand-primary) var(--whd-card-list-color-stop), var(--cd-white) var(--whd-card-list-color-stop), var(--cd-white));
+    background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) var(--whd-card-list-color-stop), var(--brand-primary) var(--whd-card-list-color-stop), var(--brand-primary));
   }
 }
 
@@ -97,13 +108,14 @@
 
 .story-item__title {
   order: -1;
+  color: var(--cd-black);
+  font-size: 1rem;
   margin-block: 1rem;
   padding-inline: 1rem;
-  font-size: 1rem;
 }
 
 .story-item__title a {
-  color: var(--cd-black);
+  color: inherit;
 }
 
 .story-item__subtitle {
