@@ -1,23 +1,28 @@
 /**
  * WHD Survivor Stories listing page
  */
+
+.path-survivor-stories {
+  overflow-x: hidden;
+}
+
 .whd-survivor-stories {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   margin: 0 auto;
-  padding-block: 4rem;
+  padding-block-end: 6rem;
 }
 
 .ss-item {
   display: flex;
-  flex-flow: row nowrap;
-  gap: 4rem;
+  flex-flow: column nowrap;
   margin-block: 4rem;
-  padding-inline-start: 2rem;
+  padding-inline: 2rem;
 }
 
 .ss-item__info {
   flex: 1 1 auto;
+  text-align: center;
 }
 
 .ss-item__info h2 a {
@@ -30,14 +35,18 @@
 }
 
 .ss-item__images {
-  flex: 0 0 400px;
+  flex: 0 0 353px;
+  order: -1;
 }
 
 .ss-item__images figure {
-  width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  transform: translate(5%, 0) rotate(4deg);
+  transform: rotate(4deg);
+}
+
+.ss-item:nth-child(2n + 1) .ss-item__images figure {
+  transform: rotate(-4deg);
 }
 
 .ss-item__button {
@@ -45,18 +54,45 @@
 }
 
 /**
- * Alternate layout per row
+ * Table/desktop layout
  */
 
-.ss-item:nth-child(2n + 1) {
-  padding-inline-start: 0;
-  padding-inline-end: 2rem;
-}
+@media screen and (min-width: 650px) {
+  .ss-item {
+    flex-flow: row nowrap;
+    gap: 2rem;
+    padding-inline-start: 2rem;
+  }
 
-.ss-item:nth-child(2n + 1) .ss-item__images {
-  order: -1;
-}
+  .ss-item__info {
+    text-align: initial;
+  }
 
-.ss-item:nth-child(2n + 1) .ss-item__images figure {
-  transform: translate(-5%, 0) rotate(-4deg);
+  .ss-item__images {
+    order: unset;
+  }
+
+  .ss-item__images figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    transform: translate(5%, 0) rotate(4deg);
+  }
+
+  /**
+   * Alternate layout per row
+   */
+  .ss-item:nth-child(2n + 1) {
+    padding-inline-start: 0;
+    padding-inline-end: 2rem;
+  }
+
+  .ss-item:nth-child(2n + 1) .ss-item__images {
+    order: -1;
+  }
+
+  .ss-item:nth-child(2n + 1) .ss-item__images figure {
+    transform: translate(-5%, 0) rotate(-4deg);
+  }
+
 }
