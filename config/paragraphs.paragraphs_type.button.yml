@@ -1,0 +1,10 @@
+uuid: beb71148-7072-4f08-ab2c-f4727c266b61
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: Button
+icon_uuid: null
+icon_default: null
+description: 'A button-looking link to act as a CTA.'
+behavior_plugins: {  }

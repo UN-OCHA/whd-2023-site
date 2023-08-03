@@ -1,0 +1,13 @@
+/**
+ * WHD Button
+ */
+.paragraph--type--button a {
+  display: inline-block;
+  width: auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: var(--cd-white);
+  background: var(--brand-primary);
+  font-weight: 700;
+  margin-block: 2rem;
+}
