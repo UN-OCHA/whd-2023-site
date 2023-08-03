@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display a Story in the Survivor Stories listing page.
+ *
+ * @see template_preprocess_node()
+ *
+ */
+#}
+<article{{ attributes.addClass('whd-survivor-stories__item ss-item') }}>
+  <div class="ss-item__info">
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    {{ content.field_survivor_profile }}
+
+    <a class="ss-item__button whd-button" href="{{ url }}">{{ 'Read full story'|t }}</a>
+  </div>
+
+  <div class="ss-item__images">
+    {{ content.field_images }}
+  </div>
+</article>

@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Theme override for Story images (Views teaser). The field gets truncated to
+ * display only one image for use in the Views page display.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+<figure{{ attributes }}>
+  {% set item = items|first %}
+  <div{{ item.attributes }}>{{ item.content }}</div>
+</figure>

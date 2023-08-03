@@ -1,0 +1,10 @@
+uuid: 83a22c37-6343-4af7-bcb7-cacd3eb3437c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.views_teaser
+label: 'Views teaser'
+targetEntityType: node
+cache: true

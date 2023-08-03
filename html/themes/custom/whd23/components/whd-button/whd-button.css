@@ -1,6 +1,12 @@
 /**
  * WHD Button
  */
+
+:root {
+  --whd-button-margin: 2rem;
+}
+
+.whd-button,
 .paragraph--type--button a {
   display: inline-block;
   width: auto;
@@ -9,5 +15,5 @@
   color: var(--cd-white);
   background: var(--brand-primary);
   font-weight: 700;
-  margin-block: 2rem;
+  margin-block: var(--whd-button-margin);
 }
