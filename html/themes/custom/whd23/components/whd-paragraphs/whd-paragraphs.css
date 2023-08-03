@@ -12,8 +12,8 @@ while keeping the content readable. */
 }
 
 .paragraph > * {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   padding-inline: 1rem;
 }
 
@@ -21,8 +21,8 @@ while keeping the content readable. */
 a max-width suitable for long-form copy. */
 .paragraph__title,
 .paragraph__text {
-  width: var(--whd-text-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-text-max);
 }
 
 .paragraph__title {

@@ -3,7 +3,7 @@
  */
 
 :root {
-  --whd-story-bg-cutoff: 69vh;
+  --whd-story-bg-cutoff: 620px;
 }
 
 .page-node-type-story {
@@ -48,26 +48,47 @@
 }
 
 .page-node-type-story .whd-images {
-  width: var(--whd-content-max);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--whd-content-max);
   margin-inline: auto;
-  margin-block: 6rem;
+  margin-block: 7rem;
 }
 
 @media screen and (min-width: 820px) {
-  .page-node-type-story .whd-images {
-    margin-block: 8rem;
+  .page-node-type-story .whd-images--1x {
+    margin-block-end: 4rem;
   }
 }
 
-.page-node-type-story .whd-images *:nth-child(1) {
-  transform: translate(-5%, 2%) rotate(6deg) scale(1.12);
+/**
+ * One image present.
+ */
+.page-node-type-story .whd-images--1x *:nth-child(1) {
+  transform: translate(0, -5%) rotate(4deg) scale(1.08);
 }
 
-.page-node-type-story .whd-images *:nth-child(2) {
-  transform: translate(1%, -24%) rotate(-10deg) scale(1.12);
+/**
+ * Two images present.
+ */
+.page-node-type-story .whd-images--2x *:nth-child(1) {
+  transform: translate(0, -2%) rotate(6deg) scale(1.08);
 }
 
-.page-node-type-story .whd-images *:nth-child(3) {
-  transform: translate(8%, 12%) rotate(6deg) scale(1.12);
+.page-node-type-story .whd-images--2x *:nth-child(2) {
+  transform: translate(0, -20%) rotate(-10deg) scale(1.08);
+}
+
+/**
+ * Three images present.
+ */
+.page-node-type-story .whd-images--3x *:nth-child(1) {
+  transform: translate(0, 2%) rotate(6deg) scale(1.08);
+}
+
+.page-node-type-story .whd-images--3x *:nth-child(2) {
+  transform: translate(3%, -15%) rotate(-10deg) scale(1.08);
+}
+
+.page-node-type-story .whd-images--3x *:nth-child(3) {
+  transform: translate(3%, 12%) rotate(6deg) scale(1.08);
 }

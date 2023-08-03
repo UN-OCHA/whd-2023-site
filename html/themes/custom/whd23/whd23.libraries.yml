@@ -87,6 +87,11 @@ whd-story-page:
     component:
       components/whd-story-page/whd-story-page.css: {}
 
+whd-survivor-stories:
+  css:
+    component:
+      components/whd-survivor-stories/whd-survivor-stories.css: {}
+
 whd-video:
   css:
     component:

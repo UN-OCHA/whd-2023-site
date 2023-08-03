@@ -9,7 +9,8 @@
 /* override paragraph defaults for the title/text fields */
 .paragraph--type--hero-image .paragraph__title,
 .paragraph--type--hero-image .paragraph__text {
-  width: var(--whd-content-max);
+  width: 100%;
+  max-width: var(--whd-content-max);
 }
 
 .paragraph--type--hero-image .paragraph__text {
