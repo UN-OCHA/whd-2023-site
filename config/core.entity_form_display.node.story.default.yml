@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.story.field_content
     - field.field.node.story.field_images
     - field.field.node.story.field_survivor_profile
+    - field.field.node.story.field_survivor_quote
     - image.style.thumbnail
     - node.type.story
   module:
@@ -19,7 +20,7 @@ mode: default
 content:
   field_content:
     type: paragraphs
-    weight: 3
+    weight: 4
     region: content
     settings:
       title: Paragraph
@@ -38,7 +39,7 @@ content:
     third_party_settings: {  }
   field_images:
     type: image_image
-    weight: 2
+    weight: 3
     region: content
     settings:
       progress_indicator: throbber
@@ -52,15 +53,23 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_survivor_quote:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 5
     region: content
     settings:
       display_label: true

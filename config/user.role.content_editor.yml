@@ -11,6 +11,7 @@ dependencies:
     - content_translation
     - contextual
     - file
+    - locale
     - node
     - paragraphs
     - paragraphs_type_permissions
@@ -69,6 +70,7 @@ permissions:
   - 'revert story revisions'
   - 'translate any entity'
   - 'translate editable entities'
+  - 'translate interface'
   - 'translate page node'
   - 'translate paragraph'
   - 'translate story node'

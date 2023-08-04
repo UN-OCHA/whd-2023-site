@@ -1,0 +1,19 @@
+uuid: 13d4d953-a5a0-49c3-a8e3-a3304c5cd24b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survivor_quote
+    - node.type.story
+id: node.story.field_survivor_quote
+field_name: field_survivor_quote
+entity_type: node
+bundle: story
+label: 'Survivor Quote'
+description: 'Enter the text WITHOUT quotation marks.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

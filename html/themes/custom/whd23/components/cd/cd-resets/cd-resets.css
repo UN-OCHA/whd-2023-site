@@ -23,6 +23,14 @@ body {
   line-height: 1.5;
 }
 
+[lang="ar"] body {
+  font-family: var(--cd-font--noto-sans-ar);
+}
+
+[lang="zh-hans"] body {
+  font-family: var(--cd-font--noto-sans-zh);
+}
+
 @media (min-width: 1024px) {
   body {
     font-size: 1.125rem;
