@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.story.field_content
     - field.field.node.story.field_images
     - field.field.node.story.field_survivor_profile
+    - field.field.node.story.field_survivor_quote
     - image.style.gallery_item
     - node.type.story
   module:
@@ -28,7 +29,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_survivor_profile:
+  field_survivor_quote:
     type: string
     label: hidden
     settings:
@@ -38,5 +39,6 @@ content:
     region: content
 hidden:
   field_content: true
+  field_survivor_profile: true
   langcode: true
   links: true

@@ -61,7 +61,7 @@
     background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) 40%, var(--brand-primary) 40%, var(--brand-primary));
   }
 
-  .story-list > *:nth-child(odd) .story-item__profile {
+  .story-list > *:nth-child(odd) .story-item__quote {
     color: var(--cd-white);
   }
 
@@ -132,22 +132,22 @@
   }
 }
 
-.story-item__profile {
+.story-item__quote {
   padding-inline: 1rem;
 }
 
 @media screen and (min-width: 480px) {
-  .story-item__profile {
+  .story-item__quote {
     padding-inline: 0;
     color: var(--cd-white);
   }
 }
 
-.story-item__profile::before {
+.story-item__quote::before {
   content: '"';
 }
 
-.story-item__profile::after {
+.story-item__quote::after {
   content: '"';
 }
 
