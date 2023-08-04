@@ -9,6 +9,10 @@
  * Implements hook_preprocess_html().
  */
 function whd23_preprocess_html(&$vars) {
+  // Current language.
+  $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['current_language'] = $current_language;
+
   // Check if current request is an exception to get error type.
   $status_code = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
 
@@ -35,9 +39,11 @@ function whd23_preprocess_html(&$vars) {
   // Construct a <link>s for Roboto: two that preconnect to Google Fonts, for a
   // nominal performance improvement, and the link to the CSS file itself.
   //
-  // To edit the font selection, visit the following URL:
+  // To edit the font selections, visit the following URLs:
   //
-  // @see https://fonts.google.com/share?selection.family=Noto%2BSans:wght@400;900
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans:wght@400;700
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans%2BArabic:wght@400;700
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans%2BSC:wght@400;700
   $preconnect_api = [
     'rel' => 'preconnect',
     'href' => 'https://fonts.googleapis.com',
@@ -47,9 +53,17 @@ function whd23_preprocess_html(&$vars) {
     'href' => 'https://fonts.gstatic.com',
     'crossorigin' => TRUE,
   ];
-  $noto_sans = [
+  $noto_sans_en_es_fr_ru = [
     'rel' => 'stylesheet',
-    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;900&display=swap',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap',
+  ];
+  $noto_sans_ar = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap',
+  ];
+  $noto_sans_zh = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap',
   ];
 
   // Add <link>s to HTML response.
@@ -62,9 +76,25 @@ function whd23_preprocess_html(&$vars) {
     'preconnect-static',
   ];
   $vars['page']['#attached']['html_head_link'][] = [
-    $noto_sans,
+    $noto_sans_en_es_fr_ru,
     'noto-sans',
   ];
+
+  // Conditionally add Arabic.
+  if ($current_language == 'ar') {
+    $vars['page']['#attached']['html_head_link'][] = [
+      $noto_sans_ar,
+      'noto-sans-ar',
+    ];
+  }
+
+  // Conditionally add Chinese.
+  if ($current_language == 'zh-hans') {
+    $vars['page']['#attached']['html_head_link'][] = [
+      $noto_sans_zh,
+      'noto-sans-zh',
+    ];
+  }
 }
 
 /**

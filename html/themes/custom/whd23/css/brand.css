@@ -48,8 +48,8 @@
    * https://brand.unocha.org/d/xEPytAUjC3sH/visual-identity#/basics/fonts/multi-language-typefaces-1
    */
   --cd-font--noto-sans: "Noto Sans", sans-serif;
-  --cd-font--noto-kufi-arabic: "Noto Kufi Arabic", sans-serif;
-  --cd-font--noto-sans-sc: "Noto Sans SC", sans-serif;
+  --cd-font--noto-sans-ar: "Noto Sans Arabic", "Noto Sans", sans-serif;
+  --cd-font--noto-sans-zh: "Noto Sans SC", "Noto Sans", sans-serif;
 
   /**
    * Accessibility-related properties
