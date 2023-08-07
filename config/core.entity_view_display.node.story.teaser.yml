@@ -30,10 +30,9 @@ content:
     weight: 0
     region: content
   field_survivor_quote:
-    type: string
+    type: basic_string
     label: hidden
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
