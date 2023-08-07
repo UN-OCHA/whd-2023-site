@@ -106,7 +106,7 @@
     "brace-style": ["error", "stroustrup"],
     "camelcase": ["error", {"properties": "always"}],
     "capitalized-comments": ["error", "always", {"ignoreConsecutiveComments": true}],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
     "comma-spacing": ["error", {"before": false, "after": true}],
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
