@@ -33,6 +33,9 @@
         mainNavContents.setAttribute('aria-hidden', String(pressed));
       });
 
+      // Allow transitions now that nav is set up
+      mainNavContents.classList.add('is--processed');
+
       // Clicking a link should shut the nav.
       mainNavLinks.forEach((el) => {
         el.addEventListener('click', closeNav);
