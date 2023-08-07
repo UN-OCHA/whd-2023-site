@@ -79,6 +79,10 @@
     transform: translate(5%, 0) rotate(4deg);
   }
 
+  [dir="rtl"] .ss-item__images figure {
+    transform: translate(-5%, 0) rotate(-4deg);
+  }
+
   /**
    * Alternate layout per row
    */
@@ -93,6 +97,10 @@
 
   .ss-item:nth-child(2n + 1) .ss-item__images figure {
     transform: translate(-5%, 0) rotate(-4deg);
+  }
+
+  [dir="rtl"] .ss-item:nth-child(2n + 1) .ss-item__images figure {
+    transform: translate(5%, 0) rotate(4deg);
   }
 
 }
