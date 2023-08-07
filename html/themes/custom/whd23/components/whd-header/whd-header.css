@@ -209,13 +209,16 @@
   right: 0;
   left: 0;
   padding: 2rem 1rem;
-  transition: 0.1666s ease-in-out;
-  transition-property: transform, visibility;
   transform: translateY(-100%);
   text-align: center;
   color: white;
   border-bottom: 4px solid var(--cd-black);
   background: var(--brand-primary);
+}
+
+.js .main-nav__contents.is--processed {
+  transition: 0.1666s ease-in-out;
+  transition-property: transform, visibility;
   will-change: transform;
 }
 
