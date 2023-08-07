@@ -62,15 +62,12 @@
  */
 .whd-site-logo {
   --whd-logo-width: 250px;
-  --whd-logo-aspect-ratio: calc(499.992 / 156.74487);
+  --whd-logo-aspect-ratio: calc(500 / 162);
 
   display: block;
   width: var(--whd-logo-width);
   height: calc(var(--whd-logo-width) / var(--whd-logo-aspect-ratio));
   margin-inline-end: calc(2rem + 36px);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
 }
 
 @media screen and (min-width: 342px) {
@@ -81,7 +78,6 @@
 
 .whd-site-logo:focus-visible {
   outline: none;
-  background: var(--whd-header-ui-color);
 }
 
 .whd-site-logo svg {
@@ -89,8 +85,10 @@
 }
 
 .whd-site-logo:focus-visible svg {
-  outline: 4px solid var(--whd-header-ui-color);
+  outline: 6px solid var(--whd-header-ui-color);
+  outline-offset: -1px;
   fill: var(--whd-header-bg-color);
+  background: var(--whd-header-ui-color);
 }
 
 /**
