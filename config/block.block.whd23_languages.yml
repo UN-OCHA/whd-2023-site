@@ -1,4 +1,4 @@
-uuid: 83d8d5b2-c62d-4e54-a42e-7f0182633c2f
+uuid: b209ec5e-7c02-49c7-9f5f-2af1f53fe8dd
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - language
   theme:
     - whd23
-id: languages
+id: whd23_languages
 theme: whd23
 region: header
 weight: -3

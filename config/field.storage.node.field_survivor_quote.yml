@@ -1,4 +1,4 @@
-uuid: d003cbf2-6029-4b15-a4a9-d31d5c6e1790
+uuid: 1bcc0dd7-0a90-4ce1-8849-24e38273111f
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,9 @@ dependencies:
 id: node.field_survivor_quote
 field_name: field_survivor_quote
 entity_type: node
-type: string
+type: string_long
 settings:
-  max_length: 255
   case_sensitive: false
-  is_ascii: false
 module: core
 locked: false
 cardinality: 1

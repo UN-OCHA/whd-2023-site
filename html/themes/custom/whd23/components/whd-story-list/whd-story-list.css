@@ -143,14 +143,6 @@
   }
 }
 
-.story-item__quote::before {
-  content: '"';
-}
-
-.story-item__quote::after {
-  content: '"';
-}
-
 .story-item__link {
   position: absolute;
   bottom: 0;
