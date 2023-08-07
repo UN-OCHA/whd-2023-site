@@ -13,7 +13,14 @@
       var mainNav = document.querySelector('.main-nav');
       var mainNavToggle = document.querySelector('.main-nav__toggle');
       var mainNavContents = document.querySelector('.main-nav__contents');
-      var mainNavLinks = document.querySelector('.main-nav__contents a');
+      var mainNavLinks = document.querySelectorAll('.main-nav__contents a');
+
+      // Helper function becsause we use it more than once.
+      function closeNav(ev) {
+        mainNav.classList.remove('is--expanded');
+        mainNavToggle.setAttribute('aria-expanded', String(false));
+        mainNavContents.setAttribute('aria-hidden', String(true));
+      }
 
       // Assign event listener to allow toggling.
       mainNavToggle.addEventListener('click', function (ev) {
@@ -27,14 +34,19 @@
       });
 
       // Clicking a link should shut the nav.
-      mainNavLinks.addEventListener('click', function (ev) {
-        mainNav.classList.remove('is--expanded');
-        mainNavToggle.setAttribute('aria-expanded', String(false));
-        mainNavContents.setAttribute('aria-hidden', String(true));
+      mainNavLinks.forEach((el) => {
+        el.addEventListener('click', closeNav);
+      });
+
+      // Shut nav when it loses focus.
+      mainNav.addEventListener('focusout', (ev) => {
+        if (!mainNav.contains(ev.relatedTarget)) {
+          closeNav();
+        }
       });
 
       // Prevent future runs from adding event listeners.
       processed = true;
-    }
+    },
   };
 })(Drupal);

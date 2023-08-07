@@ -220,10 +220,12 @@
 }
 
 .main-nav__contents a {
-  display: block;
+  display: inline-block;
+  width: auto;
   text-decoration: none;
   text-transform: uppercase;
   color: white;
+  border: none;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
@@ -240,7 +242,7 @@
 
 .main-nav__contents li {
   margin-block-end: 1rem;
-  padding-inline-end: 3rem;
+  padding-inline-end: 4rem;
 }
 
 .no-js .main-nav__contents li {
@@ -256,7 +258,7 @@
 .main-nav__contents a:focus-visible {
   color: var(--brand-primary);
   outline: none;
-  background: white;
+  background: var(--cd-white);
 }
 .main-nav__toggle:focus {
   outline: 3px solid var(--brand-primary);
@@ -269,6 +271,8 @@
 .is--expanded .main-nav__toggle:focus,
 .is--expanded .main-nav__contents a:focus-visible {
   color: var(--brand-primary);
+  outline: 8px solid var(--cd-white);
+  outline-offset: -1px;
 }
 .is--expanded .main-nav__toggle:focus {
   outline: 3px solid var(--cd-black);
