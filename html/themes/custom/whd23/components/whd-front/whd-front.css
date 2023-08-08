@@ -52,7 +52,7 @@
 
 .path-frontpage #block-whd23-page-title h1 {
   position: relative;
-  z-index: 10;
+  z-index: var(--whd-z-title);
   width: 100%;
   max-width: var(--whd-content-max);
   margin: 0;

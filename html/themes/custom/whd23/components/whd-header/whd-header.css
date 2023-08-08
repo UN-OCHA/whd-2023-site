@@ -151,7 +151,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  z-index: 10;
+  z-index: calc(var(--whd-z-main-nav) + 10);
   top: 1rem;
   width: 36px;
   height: 32px;
@@ -202,7 +202,7 @@
 
 .js .main-nav__contents {
   position: absolute;
-  z-index: 1;
+  z-index: calc(var(--whd-z-main-nav));
   top: 0;
   right: 0;
   left: 0;

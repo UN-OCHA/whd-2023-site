@@ -57,6 +57,12 @@
   --cd-outline-size: 3px;
 
   /**
+   * z-index management
+   */
+  --whd-z-main-nav: 100;
+  --whd-z-title: 10;
+
+  /**
    * Site-specific brand defaults.
    *
    * Unlike CD, override the values directly in this section:
