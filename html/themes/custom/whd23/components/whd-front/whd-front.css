@@ -7,7 +7,6 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-block-start: 32vw;
 }
 
 .path-frontpage .slogan__text {
@@ -29,8 +28,8 @@
 .path-frontpage .slogan::before {
   position: absolute;
   z-index: 0;
-  top: -30vw;
   right: 0;
+  bottom: -65vw;
   display: block;
   width: 100vw;
   height: 50.18518vw;
@@ -41,30 +40,14 @@
     url('../../img/whd23-homepage-banner-2x.png') 2x,
     url('../../img/whd23-homepage-banner-4x.png') 4x
   );
-  background-size: 68vw;
-}
-
-/* Move banner to the end of reading-dir on desktop */
-@media screen and (min-width: 940px) {
-  .path-frontpage .slogan {
-    margin-block-start: 8vw;
-  }
-
-  .path-frontpage .slogan::before {
-    top: calc(90px - 14vw);
-    background-position: 105% 0;
-    background-size: calc(50px + 44vw);
-  }
-
-  [dir="rtl"] .path-frontpage .slogan::before {
-    transform: scale(-1, 1);
-  }
+  background-size: 105vw;
 }
 
 .path-frontpage #block-whd23-page-title {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  margin-block-end: 32vw;
 }
 
 .path-frontpage #block-whd23-page-title h1 {
@@ -84,11 +67,41 @@
   padding-inline: 1rem;
 }
 
+/* Special coloring for first paragraph */
 .path-frontpage .field-content__paragraph:first-child {
-  --whd-front-color-stop: 18rem;
+  --whd-front-color-stop: 25rem;
 
-  padding-block-start: 3rem;
+  padding-block-start: calc(4rem + 15vw);
   color: var(--cd-white);
   background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
   font-size: 1.25em;
+}
+
+/**
+ * Desktop.
+ *
+ * Move banner to the end of reading-direction.
+ */
+@media screen and (min-width: 940px) {
+  .path-frontpage .slogan {
+    margin-block-start: 10rem;
+  }
+
+  .path-frontpage .slogan::before {
+    top: calc(100px - 14vw);
+    background-position: 105% 0;
+    background-size: calc(50px + 44vw);
+  }
+
+  [dir="rtl"] .path-frontpage .slogan::before {
+    transform: scale(-1, 1);
+  }
+
+  .path-frontpage #block-whd23-page-title {
+    margin: 0;
+  }
+
+  .path-frontpage .field-content__paragraph:first-child {
+    padding-block-start: 4rem;
+  }
 }
