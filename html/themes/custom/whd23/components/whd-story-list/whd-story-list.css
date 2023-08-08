@@ -159,3 +159,14 @@
   background: var(--cd-white);
   font-weight: 700;
 }
+
+/* last item in mobile-layout list needs some special treatment */
+@media screen and (max-width: 480px) {
+  .story-list > *:last-child .story-item {
+    padding-block-end: 5rem;
+  }
+
+  .story-list > *:last-child .story-item__link {
+    bottom: 2rem;
+  }
+}
