@@ -42,7 +42,7 @@
 
   // Accepts a DOM element and replaces it with a YouTube iframe.
   function prepVideo(video) {
-    video.innerHTML = '<iframe class="video__iframe" src="https://www.youtube-nocookie.com/embed/' + video.dataset.videoSlug + '?autoplay=1&playsinline=1" frameborder="0" allowfullscreen="true" allow="fullscreen"></iframe>';
+    video.innerHTML = '<iframe class="video__iframe" src="https://www.youtube-nocookie.com/embed/' + video.dataset.videoSlug + '?autoplay=1&playsinline=1" frameborder="0" allow="autoplay; fullscreen"></iframe>';
   }
 
   // Warm TCP connections by adding <link>s to the <head>.
