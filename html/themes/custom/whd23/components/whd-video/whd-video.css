@@ -4,6 +4,7 @@
 .video {
   aspect-ratio: 16 / 9;
   position: relative;
+  overflow: hidden;
 
   /* override paragraph defaults for visual padding */
   width: calc(var(--whd-content-max) - 2rem);
@@ -16,11 +17,12 @@
 .video__link {
   position: absolute;
   display: block;
-  inset: 0;
+  inset: -1px;
 }
 
 .video__img {
   width: 100%;
+  height: 100%;
 }
 
 .video__button {
