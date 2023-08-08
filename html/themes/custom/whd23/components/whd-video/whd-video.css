@@ -2,7 +2,7 @@
  * WHD Video Embeds
  */
 .video {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   position: relative;
 
   /* override paragraph defaults for visual padding */
@@ -10,7 +10,7 @@
   max-width: calc(100% - 2rem);
   padding: 0;
   margin-inline: 1rem;
-  background: #000;
+  background: #fff;
 }
 
 .video__link {
