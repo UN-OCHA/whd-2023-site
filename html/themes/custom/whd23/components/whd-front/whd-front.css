@@ -100,7 +100,7 @@
     }
 
     .path-frontpage .slogan::before {
-      top: calc(100px - 14vw);
+      top: max(-145px, calc(100px - 14vw));
       background-position: 105% 0;
       background-size: calc(50px + 44vw);
     }
