@@ -2,12 +2,9 @@
  * WHD Survivor Stories listing page
  */
 
-.path-survivor-stories {
-  overflow-x: hidden;
-}
-
 .whd-survivor-stories {
   width: 100%;
+  max-width: 820px;
   max-width: var(--whd-content-max);
   margin: 0 auto;
   padding-block-end: 6rem;
@@ -16,6 +13,7 @@
 .ss-item {
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 2rem; /* IE */
   margin-block: 4rem;
   padding-inline: 2rem;
 }
@@ -40,13 +38,17 @@
 }
 
 .ss-item__images figure {
-  margin: 0 auto;
+  --whd-ss-item-transform: rotate(4deg);
+
+  margin: 0;
+  margin-right: 1rem; /* IE */
+  margin-inline: auto;
   padding: 0;
-  transform: rotate(4deg);
+  transform: var(--whd-ss-item-transform);
 }
 
 .ss-item:nth-child(2n + 1) .ss-item__images figure {
-  transform: rotate(-4deg);
+  --whd-ss-item-transform: rotate(-4deg);
 }
 
 .ss-item__button {
@@ -73,14 +75,15 @@
   }
 
   .ss-item__images figure {
+    --whd-ss-item-transform: translate(5%, 0) rotate(4deg);
+
     width: 100%;
     margin: 0;
     padding: 0;
-    transform: translate(5%, 0) rotate(4deg);
   }
 
   [dir="rtl"] .ss-item__images figure {
-    transform: translate(-5%, 0) rotate(-4deg);
+    --whd-ss-item-transform: translate(-5%, 0) rotate(-4deg);
   }
 
   /**
@@ -96,11 +99,10 @@
   }
 
   .ss-item:nth-child(2n + 1) .ss-item__images figure {
-    transform: translate(-5%, 0) rotate(-4deg);
+    --whd-ss-item-transform: translate(-5%, 0) rotate(-4deg);
   }
 
   [dir="rtl"] .ss-item:nth-child(2n + 1) .ss-item__images figure {
-    transform: translate(5%, 0) rotate(4deg);
+    --whd-ss-item-transform: translate(5%, 0) rotate(4deg);
   }
-
 }

@@ -14,7 +14,7 @@ input {
 
 body {
   color: var(--cd-grey--dark);
-  font-family: var(--cd-font--noto-sans);
+  font-family: "Noto Sans", sans-serif;
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -24,11 +24,11 @@ body {
 }
 
 [lang="ar"] body {
-  font-family: var(--cd-font--noto-sans-ar);
+  font-family: "Noto Sans Arabic", "Noto Sans", sans-serif;
 }
 
 [lang="zh-hans"] body {
-  font-family: var(--cd-font--noto-sans-zh);
+  font-family: "Noto Sans SC", "Noto Sans", sans-serif;
 }
 
 @media (min-width: 1024px) {

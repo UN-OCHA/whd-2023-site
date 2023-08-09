@@ -10,10 +10,11 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 4rem;
-  margin-block: 4rem;
   width: 100%;
   max-width: var(--whd-text-max);
+  margin-bottom: 4rem; /* IE */
+  gap: 4rem;
+  margin-block: 4rem;
 }
 
 /**
@@ -25,6 +26,7 @@
   flex-flow: column nowrap;
   align-items: center;
   gap: 1rem;
+  max-width: 100%; /* IE */
 }
 
 @media (min-width: 540px) {
