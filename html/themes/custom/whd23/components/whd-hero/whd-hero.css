@@ -16,6 +16,7 @@
 }
 
 .paragraph--type--hero-image .paragraph__text {
-  margin-block: 2rem;
   text-wrap: balance;
+  text-shadow: .5px .5px 0 var(--cd-black);
+  margin-block: 2rem;
 }
