@@ -13,8 +13,6 @@
   {% if label and not page %}
     <h2{{ title_attributes.addClass(['story-item__title']) }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      <br>
-      <span class="story-item__subtitle">{{ 'Survivor'|t }}</span>
     </h2>
   {% endif %}
   {{ title_suffix }}
