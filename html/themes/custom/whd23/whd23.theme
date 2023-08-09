@@ -31,7 +31,7 @@ function whd23_preprocess_html(&$vars) {
   // css rules that rely on the `js` class being defined or not.
   $js_detection = [
     '#tag' => 'script',
-    '#value' => "document.documentElement.className = document.documentElement.className.replace('no-js', typeof document.addEventListener !== 'undefined' ? 'js' : 'no-js');",
+    '#value' => "document.documentElement.className = document.documentElement.className.replace('no-js', CSS.supports('color', 'var(--supports-test)') ? 'js' : 'no-js');",
     '#weight' => -1,
   ];
   $vars['page']['#attached']['html_head'][] = [$js_detection, 'js-detection'];
