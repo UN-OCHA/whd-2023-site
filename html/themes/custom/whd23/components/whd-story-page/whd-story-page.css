@@ -16,6 +16,10 @@
   --whd-header-bg-color: var(--brand-primary);
 }
 
+.page-node-type-story .main-nav.is--expanded .main-nav__toggle {
+  color: black;
+}
+
 .page-node-type-story .main-nav__contents {
   color: black;
   background: white;
