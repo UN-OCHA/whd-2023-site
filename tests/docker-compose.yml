@@ -4,16 +4,16 @@ networks:
   default:
 
 volumes:
-  starterkit-test-site-database:
-  starterkit-test-site-public:
-  starterkit-test-site-private:
+  whd-2023-test-site-database:
+  whd-2023-test-site-public:
+  whd-2023-test-site-private:
 
 services:
   memcache:
     restart: always
     image: public.ecr.aws/unocha/memcache:1.6
-    hostname: starterkit-test-memcache
-    container_name: starterkit-test-memcache
+    hostname: whd-2023-test-memcache
+    container_name: whd-2023-test-memcache
     environment:
       MEMCACHE_MAX_MEMORY: 64
     ports:
@@ -23,29 +23,29 @@ services:
 
   mysql:
     image: public.ecr.aws/unocha/mysql:10.6
-    hostname: starterkit-test-mysql
-    container_name: starterkit-test-mysql
+    hostname: whd-2023-test-mysql
+    container_name: whd-2023-test-mysql
     environment:
-      - MYSQL_DB=starterkit
-      - MYSQL_USER=starterkit
-      - MYSQL_PASS=starterkit
+      - MYSQL_DB=whd-2023
+      - MYSQL_USER=whd-2023
+      - MYSQL_PASS=whd-2023
     volumes:
-      - "starterkit-test-site-database:/var/lib/mysql:rw"
+      - "whd-2023-test-site-database:/var/lib/mysql:rw"
     networks:
       - default
 
   drupal:
-    image: public.ecr.aws/unocha/starterkit-site:local
-    hostname: starterkit-test-site
-    container_name: starterkit-test-site
+    image: public.ecr.aws/unocha/whd-2023-site:local
+    hostname: whd-2023-test-site
+    container_name: whd-2023-test-site
     depends_on:
       - memcache
       - mysql
     volumes:
       - "./settings:/srv/www/shared/settings:ro"
       # Mount volumes for the private and public files.
-      - "starterkit-test-site-public:/srv/www/html/sites/default/files:rw"
-      - "starterkit-test-site-private:/srv/www/html/sites/default/private:rw"
+      - "whd-2023-test-site-public:/srv/www/html/sites/default/files:rw"
+      - "whd-2023-test-site-private:/srv/www/html/sites/default/private:rw"
       # Mount the folders needed for the tests.
       - "../phpcs.xml:/srv/www/phpcs.xml:ro"
       - "../phpunit.xml:/srv/www/phpunit.xml:ro"
@@ -55,12 +55,12 @@ services:
     environment:
       - TERM=xterm
       - ENVIRONMENT=dev
-      - NGINX_SERVERNAME=starterkit-test-site,localhost,127.0.0.1
-      - NGINX_OVERRIDE_PROTOCOL=HTTP,starterkit-test-site,localhost,127.0.0.1
-      - DRUSH_OPTIONS_URI=http://starterkit-test-site
-      - DRUPAL_DB_DATABASE=starterkit
-      - DRUPAL_DB_USERNAME=starterkit
-      - DRUPAL_DB_PASSWORD=starterkit
+      - NGINX_SERVERNAME=whd-2023-test-site,localhost,127.0.0.1
+      - NGINX_OVERRIDE_PROTOCOL=HTTP,whd-2023-test-site,localhost,127.0.0.1
+      - DRUSH_OPTIONS_URI=http://whd-2023-test-site
+      - DRUPAL_DB_DATABASE=whd-2023
+      - DRUPAL_DB_USERNAME=whd-2023
+      - DRUPAL_DB_PASSWORD=whd-2023
       - DRUPAL_DB_HOST=mysql
       - DRUPAL_DB_DRIVER=mysql
       - PHP_ENVIRONMENT=dev

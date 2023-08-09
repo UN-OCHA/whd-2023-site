@@ -1,0 +1,41 @@
+uuid: 87db8ae9-57b9-4ebf-9234-438151572810
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.story_list.field_stories
+    - field.field.paragraph.story_list.field_text
+    - field.field.paragraph.story_list.field_title
+    - paragraphs.paragraphs_type.story_list
+  module:
+    - text
+id: paragraph.story_list.default
+targetEntityType: paragraph
+bundle: story_list
+mode: default
+content:
+  field_stories:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

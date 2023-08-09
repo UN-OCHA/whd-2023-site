@@ -1,0 +1,5 @@
+{% set source_path = '@whd23/img/whd-logo/whd-blk-'~ language ~'.svg' %}
+<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="whd-site-logo">
+  <span class="visually-hidden">{{ 'World Humanitarian Day'|t }}</span>
+  <span aria-hidden="true">{{ source(source_path)|replace({'<?xml version="1.0" encoding="UTF-8"?>':''})|raw }}</span>
+</a>

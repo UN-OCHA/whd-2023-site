@@ -1,0 +1,291 @@
+/**
+ * Global page header
+ */
+
+:root {
+  --whd-header-ui-color: var(--cd-black);
+  --whd-header-bg-color: var(--cd-white);
+}
+
+.whd-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  color: var(--whd-header-ui-color);
+  background-color: var(--whd-header-bg-color);
+}
+
+@media screen and (min-width: 576px) {
+  .whd-header {
+    flex-wrap: nowrap;
+  }
+
+  .no-js .whd-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 30em) {
+  .whd-header {
+    padding: 1rem;
+  }
+}
+
+.main-nav {
+  order: 2;
+}
+
+.no-js .main-nav {
+  flex: 1 0 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .main-nav {
+    order: 3;
+  }
+}
+
+.main-nav li {
+  display: block;
+}
+
+.no-js .main-nav li {
+  display: inline-block;
+}
+
+/**
+ * Site logo
+ */
+.whd-site-logo {
+  --whd-logo-width: 250px;
+  --whd-logo-aspect-ratio: calc(500 / 162);
+
+  display: block;
+  width: var(--whd-logo-width);
+  height: calc(var(--whd-logo-width) / var(--whd-logo-aspect-ratio));
+  margin-inline-end: calc(2rem + 36px);
+}
+
+@media screen and (min-width: 342px) {
+  .whd-site-logo {
+    margin-inline-end: 0;
+  }
+}
+
+.whd-site-logo:focus-visible {
+  outline: none;
+}
+
+.whd-site-logo svg {
+  fill: var(--whd-header-ui-color);
+}
+
+.whd-site-logo:focus-visible svg {
+  outline: 6px solid var(--whd-header-ui-color);
+  outline-offset: -1px;
+  fill: var(--whd-header-bg-color);
+  background: var(--whd-header-ui-color);
+}
+
+/**
+ * Language switcher
+ */
+.language-switcher {
+  flex: 1 1 auto;
+}
+
+.language-switcher .links {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 36px; /* matching hamburger button height */
+  margin: 0;
+  padding: 0;
+}
+
+.language-switcher .links li {
+  list-style-type: none;
+  line-height: 0;
+}
+
+.language-switcher .links a {
+  padding: 0.5rem;
+  color: var(--whd-header-ui-color);
+  font-size: 0.75rem;
+}
+
+.language-switcher .links a:focus-visible {
+  color: var(--whd-header-bg-color);
+  outline: none;
+  background: var(--whd-header-ui-color);
+}
+
+@media screen and (min-width: 576px) {
+  .language-switcher .links {
+    justify-content: flex-end;
+  }
+}
+
+.language-switcher .links a.is-active {
+  font-weight: 700;
+}
+
+/**
+ * Main nav: basic behavior is a top-edge, off-canvas hamburger.
+ */
+.main-nav {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.main-nav.contextual-region {
+  /* WHD-51: override core's style for admins, so they can still use the nav */
+  position: static;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: calc(var(--whd-z-main-nav) + 10);
+  top: 1rem;
+  width: 36px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--whd-header-ui-color);
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+}
+
+[dir="ltr"] .main-nav__toggle {
+  right: 1rem;
+}
+
+[dir="rtl"] .main-nav__toggle {
+  left: 1rem;
+}
+
+.main-nav__toggle__symbol {
+  position: relative;
+  top: 12px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 0;
+}
+
+.no-js .main-nav__toggle {
+  display: none;
+}
+
+@media screen and (min-width: 400px) {
+  .main-nav__toggle {
+    position: relative;
+    top: unset;
+    right: unset;
+    left: unset;
+  }
+}
+
+.main-nav__contents {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.js .main-nav__contents {
+  position: absolute;
+  z-index: calc(var(--whd-z-main-nav));
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem 1rem;
+  transform: translateY(-100%);
+  text-align: center;
+  color: white;
+  border-bottom: 4px solid var(--cd-black);
+  background: var(--brand-primary);
+}
+
+.js .main-nav__contents.is--processed {
+  transition: 0.1666s ease-in-out;
+  transition-property: transform, visibility;
+  will-change: transform;
+}
+
+.main-nav__contents a {
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.no-js .main-nav__contents a {
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .main-nav__contents a {
+    font-size: 1.625rem;
+  }
+}
+
+.main-nav__contents li {
+  margin-block-end: 1rem;
+  padding-inline-end: 4rem;
+}
+
+.no-js .main-nav__contents li {
+  margin-inline-end: 1rem;
+  padding-block-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+/**
+ * Focus styles for toggle+links
+ */
+.main-nav__toggle:focus,
+.main-nav__contents a:focus-visible {
+  color: var(--brand-primary);
+  outline: none;
+  background: var(--cd-white);
+}
+.main-nav__toggle:focus {
+  outline: 3px solid var(--brand-primary);
+}
+.no-js .main-nav__contents a:hover,
+.no-js .main-nav__contents a:focus-visible {
+  color: var(--brand-primary);
+}
+
+.is--expanded .main-nav__toggle:focus,
+.is--expanded .main-nav__contents a:focus-visible {
+  color: var(--brand-primary);
+  outline: 8px solid var(--cd-white);
+  outline-offset: -1px;
+}
+.is--expanded .main-nav__toggle:focus {
+  outline: 3px solid var(--cd-black);
+}
+
+/**
+ * JS toggling
+ */
+.js .main-nav .main-nav__contents {
+  visibility: hidden;
+}
+.js .main-nav.is--expanded .main-nav__contents {
+  visibility: visible;
+  transform: translateY(0);
+}

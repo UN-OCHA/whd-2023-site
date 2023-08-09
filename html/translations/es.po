@@ -1,0 +1,58 @@
+# $Id$
+#
+# LANGUAGE translation of WHD
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from theme
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-08-05 12:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: templates/block/block--system-menu-block--main.html.twig:71
+msgid "Menu"
+msgstr "Menú"
+
+msgid "World Humanitarian Day"
+msgstr "Día Mundial de la Asistencia Humanitaria"
+
+msgid "Learn and share"
+msgstr "Aprende y comparte"
+
+msgid "Partner resources"
+msgstr "Recursos para socios"
+
+#: templates/content/node--reference.html.twig
+msgid "The Origins"
+msgstr "Los Orígenes"
+
+#: templates/book/book-navigation.html.twig
+msgid "See next profile"
+msgstr "Ver perfil siguiente"
+
+msgid "Explore more profiles"
+msgstr "Explorar más perfiles"
+
+msgid "Profiles"
+msgstr "Perfiles"
+
+#: Onpage anchors
+msgid "about-campaign"
+msgstr "acerca-campaña"
+
+msgid "humanitarian-profiles"
+msgstr "perfiles-humanitario"
+
+msgid "partner-resources"
+msgstr "recursos-socios"
+
+msgid "about-whd"
+msgstr "acerca-whd"

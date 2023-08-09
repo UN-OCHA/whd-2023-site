@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display a Story in the Paragraph type Story List.
+ *
+ * @see template_preprocess_node()
+ *
+ */
+#}
+<article{{ attributes.addClass(['story-list__item', 'story-item']) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes.addClass(['story-item__title']) }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      <br>
+      <span class="story-item__subtitle">{{ 'Survivor'|t }}</span>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {{ content.field_images }}
+  {{ content.field_survivor_quote }}
+
+  <div class="story-item__link">
+    <a href="{{ url }}">{{ 'Read full interview'|t }}</a>
+  </div>
+</article>

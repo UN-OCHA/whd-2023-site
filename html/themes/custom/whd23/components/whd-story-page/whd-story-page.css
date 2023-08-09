@@ -1,0 +1,94 @@
+/**
+ * WHD Story details page
+ */
+
+:root {
+  --whd-story-bg-cutoff: 620px;
+}
+
+.page-node-type-story {
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) var(--whd-story-bg-cutoff), var(--cd-white) var(--whd-story-bg-cutoff), var(--cd-white));
+}
+
+.page-node-type-story .whd-header {
+  --whd-header-ui-color: var(--cd-white);
+  --whd-header-bg-color: var(--brand-primary);
+}
+
+/**
+ * Page contents
+ */
+.survivor-story__pretitle {
+  margin-block-start: 4rem;
+  margin-block-end: 0;
+  text-align: center;
+  color: var(--cd-white);
+  text-shadow: .5px .5px 0 #0006;
+  font-size: 3.6rem;
+  font-size: clamp(2.4rem, 10vw, 3.6rem);
+}
+
+.page-node-type-story #block-whd23-page-title h1 {
+  margin-block: 0;
+  color: var(--cd-white);
+  text-shadow: .5px .5px 0 #0006;
+}
+
+.survivor-story__profile {
+  position: relative;
+  z-index: 10;
+  max-width: calc(var(--whd-content-max) / 2);
+  margin-block-end: 4rem;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--cd-white);
+  text-shadow: .5px .5px 0 #0006;
+  margin-inline: auto;
+}
+
+.page-node-type-story .whd-images {
+  width: 100%;
+  max-width: var(--whd-content-max);
+  margin-inline: auto;
+  margin-block: 7rem;
+}
+
+@media screen and (min-width: 820px) {
+  .page-node-type-story .whd-images--1x {
+    margin-block-end: 4rem;
+  }
+}
+
+/**
+ * One image present.
+ */
+.page-node-type-story .whd-images--1x *:nth-child(1) {
+  transform: translate(0, -5%) rotate(4deg) scale(1.08);
+}
+
+/**
+ * Two images present.
+ */
+.page-node-type-story .whd-images--2x *:nth-child(1) {
+  transform: translate(0, -2%) rotate(6deg) scale(1.08);
+}
+
+.page-node-type-story .whd-images--2x *:nth-child(2) {
+  transform: translate(0, -20%) rotate(-10deg) scale(1.08);
+}
+
+/**
+ * Three images present.
+ */
+.page-node-type-story .whd-images--3x *:nth-child(1) {
+  transform: translate(0, 2%) rotate(6deg) scale(1.08);
+}
+
+.page-node-type-story .whd-images--3x *:nth-child(2) {
+  transform: translate(3%, -15%) rotate(-10deg) scale(1.08);
+}
+
+.page-node-type-story .whd-images--3x *:nth-child(3) {
+  transform: translate(3%, 12%) rotate(6deg) scale(1.08);
+}

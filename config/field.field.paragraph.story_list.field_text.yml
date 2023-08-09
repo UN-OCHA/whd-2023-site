@@ -1,0 +1,24 @@
+uuid: 35cdaf2f-76d8-4f97-a102-e2e290101312
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.story_list
+  module:
+    - text
+id: paragraph.story_list.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: story_list
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

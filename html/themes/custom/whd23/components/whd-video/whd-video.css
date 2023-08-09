@@ -1,0 +1,67 @@
+/**
+ * WHD Video Embeds
+ */
+.video {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+
+  /* override paragraph defaults for visual padding */
+  width: calc(var(--whd-content-max) - 2rem);
+  max-width: calc(100% - 2rem);
+  padding: 0;
+  margin-inline: 1rem;
+  background: #fff;
+}
+
+.video__link {
+  position: absolute;
+  display: block;
+  inset: -1px;
+}
+
+.video__img {
+  width: 100%;
+  height: 100%;
+}
+
+.video__button {
+  position: absolute;
+  display: block;
+  width: 73.4px;
+  height: 51.8px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent url('button-youtube.png') no-repeat 50% 50%;
+  background-size: contain;
+  inset: 50%;
+}
+
+.video__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+/**
+ * Text treatment
+ */
+
+.paragraph--type--video {
+  padding-block-end: 4rem;
+}
+
+/* override paragraph defaults for the title/text fields */
+.paragraph--type--video .paragraph__title,
+.paragraph--type--video .paragraph__text {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: var(--whd-content-max);
+}
+
+.paragraph--type--video .paragraph__text {
+  margin-block: 2rem;
+  text-wrap: balance;
+}

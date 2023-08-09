@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Theme override for the Survivor Profile.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{% for item in items %}
+  <p{{ attributes.addClass('survivor-story__profile') }}>{{ item.content }}</p>
+{% endfor %}

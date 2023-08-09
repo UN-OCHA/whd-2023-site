@@ -1,4 +1,4 @@
-uuid: a32d2af8-5bb3-4b37-b95a-2cc90f4deb13
+uuid: a86dba8e-eb26-45a3-8fc1-01b66ed27f61
 langcode: en
 status: true
 dependencies: {  }
@@ -7,5 +7,5 @@ _core:
 id: en
 label: English
 direction: ltr
-weight: 0
+weight: -8
 locked: false

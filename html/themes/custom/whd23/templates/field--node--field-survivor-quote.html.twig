@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Theme override for the Survivor Quote.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{% for item in items %}
+  <p{{ attributes.addClass(['story-item__quote', 'survivor-story__quote']) }}>{{ item.content }}</p>
+{% endfor %}

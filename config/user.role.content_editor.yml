@@ -1,0 +1,91 @@
+uuid: 23fd9086-b00f-47a4-82c0-597a398b9121
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+    - node.type.story
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - content_translation
+    - contextual
+    - file
+    - locale
+    - node
+    - paragraphs
+    - paragraphs_type_permissions
+    - path
+    - system
+    - taxonomy
+    - toolbar
+_core:
+  default_config_hash: Wur9kcEOwY1Jal81NssKnz3RhVJxAvBwyWQBGcA_1Go
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'create content translations'
+  - 'create page content'
+  - 'create paragraph content button'
+  - 'create paragraph content heading'
+  - 'create paragraph content hero_image'
+  - 'create paragraph content principle'
+  - 'create paragraph content principles_list'
+  - 'create paragraph content story_list'
+  - 'create paragraph content text'
+  - 'create paragraph content video'
+  - 'create story content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete any page content'
+  - 'delete any story content'
+  - 'delete content translations'
+  - 'delete own page content'
+  - 'delete own story content'
+  - 'delete page revisions'
+  - 'delete paragraph content button'
+  - 'delete paragraph content heading'
+  - 'delete paragraph content hero_image'
+  - 'delete paragraph content principle'
+  - 'delete paragraph content principles_list'
+  - 'delete paragraph content story_list'
+  - 'delete paragraph content text'
+  - 'delete paragraph content video'
+  - 'delete story revisions'
+  - 'edit any page content'
+  - 'edit any story content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit own story content'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert page revisions'
+  - 'revert story revisions'
+  - 'translate any entity'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'translate page node'
+  - 'translate paragraph'
+  - 'translate story node'
+  - 'update content translations'
+  - 'update paragraph content button'
+  - 'update paragraph content heading'
+  - 'update paragraph content hero_image'
+  - 'update paragraph content principle'
+  - 'update paragraph content principles_list'
+  - 'update paragraph content story_list'
+  - 'update paragraph content text'
+  - 'update paragraph content video'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view story revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'

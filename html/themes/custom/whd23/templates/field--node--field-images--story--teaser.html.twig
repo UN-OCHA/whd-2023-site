@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Theme override for Story images (teaser). The field gets truncated to display
+ * only one image for use in the Story List paragraph type.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{{ attach_library('whd23/whd-images') }}
+
+<figure{{ attributes.addClass(['story-item__images', 'whd-images']) }}>
+  {% set item = items|first %}
+  <div{{ item.attributes }}>{{ item.content }}</div>
+</figure>

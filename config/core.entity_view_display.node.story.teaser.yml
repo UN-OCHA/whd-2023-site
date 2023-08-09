@@ -1,0 +1,43 @@
+uuid: cbef545f-265f-4045-9bc5-f4d71f7216a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.story.field_content
+    - field.field.node.story.field_images
+    - field.field.node.story.field_survivor_profile
+    - field.field.node.story.field_survivor_quote
+    - image.style.gallery_item
+    - node.type.story
+  module:
+    - image
+    - user
+id: node.story.teaser
+targetEntityType: node
+bundle: story
+mode: teaser
+content:
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: gallery_item
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_survivor_quote:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_content: true
+  field_survivor_profile: true
+  langcode: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: 9a32c1da-58fb-4b14-98de-0356df9c0f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.principles_list
+id: paragraph.principles_list.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: principles_list
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

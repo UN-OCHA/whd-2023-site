@@ -1,0 +1,19 @@
+uuid: d2526020-0a20-48f3-a9c1-6bc6ee0aeea2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_survivor_profile
+    - node.type.story
+id: node.story.field_survivor_profile
+field_name: field_survivor_profile
+entity_type: node
+bundle: story
+label: 'Survivor Profile'
+description: 'A very brief biography of the Survivor, including their position and how they were involved in the events that led to WHD.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

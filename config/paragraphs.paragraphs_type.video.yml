@@ -1,0 +1,10 @@
+uuid: 80bd414c-888b-4e23-a11a-94707d08469f
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+icon_default: null
+description: 'Embed a video from YouTube.'
+behavior_plugins: {  }

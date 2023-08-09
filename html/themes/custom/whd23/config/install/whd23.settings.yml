@@ -1,0 +1,3 @@
+favicon:
+  use_default: false
+  path: 'themes/custom/whd23/img/icons/favicon-32x32.png'

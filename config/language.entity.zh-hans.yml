@@ -1,0 +1,9 @@
+uuid: a8e9d711-6311-4d32-ac99-96057391731c
+langcode: zh-hans
+status: true
+dependencies: {  }
+id: zh-hans
+label: 中文
+direction: ltr
+weight: -9
+locked: false

@@ -1,0 +1,203 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function whd23_preprocess_html(&$vars) {
+  // Current language.
+  $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['current_language'] = $current_language;
+
+  // Check if current request is an exception to get error type.
+  $status_code = \Drupal::requestStack()->getCurrentRequest()->attributes->get('exception');
+
+  // Add body classes.
+  if ($status_code && $status_code->getStatusCode() == 404) {
+    $vars['attributes']['class'][] = 'path-error path-error--404';
+  }
+  if ($status_code && $status_code->getStatusCode() == 403) {
+    $vars['attributes']['class'][] = 'path-error path-error--403';
+  }
+
+  // Add a script to detect whether javascript is enabled or not and then
+  // replace the `no-js` class with the `js` one.
+  //
+  // Drupal.js does this but way too late on first load causing issues with
+  // css rules that rely on the `js` class being defined or not.
+  $js_detection = [
+    '#tag' => 'script',
+    '#value' => "document.documentElement.className = document.documentElement.className.replace('no-js', typeof document.addEventListener !== 'undefined' ? 'js' : 'no-js');",
+    '#weight' => -1,
+  ];
+  $vars['page']['#attached']['html_head'][] = [$js_detection, 'js-detection'];
+
+  // Construct a <link>s for Roboto: two that preconnect to Google Fonts, for a
+  // nominal performance improvement, and the link to the CSS file itself.
+  //
+  // To edit the font selections, visit the following URLs:
+  //
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans:wght@400;700
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans%2BArabic:wght@400;700
+  // @see https://fonts.google.com/share?selection.family=Noto%2BSans%2BSC:wght@400;700
+  $preconnect_api = [
+    'rel' => 'preconnect',
+    'href' => 'https://fonts.googleapis.com',
+  ];
+  $preconnect_static = [
+    'rel' => 'preconnect',
+    'href' => 'https://fonts.gstatic.com',
+    'crossorigin' => TRUE,
+  ];
+  $noto_sans_en_es_fr_ru = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap',
+  ];
+  $noto_sans_ar = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap',
+  ];
+  $noto_sans_zh = [
+    'rel' => 'stylesheet',
+    'href' => 'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap',
+  ];
+
+  // Add <link>s to HTML response.
+  $vars['page']['#attached']['html_head_link'][] = [
+    $preconnect_api,
+    'preconnect-api',
+  ];
+  $vars['page']['#attached']['html_head_link'][] = [
+    $preconnect_static,
+    'preconnect-static',
+  ];
+  $vars['page']['#attached']['html_head_link'][] = [
+    $noto_sans_en_es_fr_ru,
+    'noto-sans',
+  ];
+
+  // Conditionally add Arabic.
+  if ($current_language == 'ar') {
+    $vars['page']['#attached']['html_head_link'][] = [
+      $noto_sans_ar,
+      'noto-sans-ar',
+    ];
+  }
+
+  // Conditionally add Chinese.
+  if ($current_language == 'zh-hans') {
+    $vars['page']['#attached']['html_head_link'][] = [
+      $noto_sans_zh,
+      'noto-sans-zh',
+    ];
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function whd23_preprocess_page(&$variables) {
+  // Current language.
+  $current_language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $variables['current_language'] = $current_language;
+
+  // Add language to Drupal Settings for use in JS.
+  $variables['#attached']['drupalSettings']['language'] = $current_language;
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function whd23_preprocess_block(&$vars) {
+  // Current language available in template override.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $vars['language'] = $language;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Incorporates the Content Type for each page. The suggestions will allow the
+ * following templates to be picked up:
+ *
+ * - page--CONTENT_TYPE.html.twig
+ */
+function whd23_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Incorporates the View Mode for each field. The suggestions will allow the
+ * following templates to be picked up:
+ *
+ * - field--FIELD_NAME--VIEW_MODE.html.twig
+ * - field--ENTITY_TYPE--FIELD_NAME--VIEW_MODE.html.twig
+ * - field--ENTITY_TYPE--FIELD_NAME--BUNDLE--VIEW_MODE.html.twig
+ */
+function whd23_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  $field_name = $element['#field_name'];
+  $view_mode = $element['#view_mode'];
+  $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
+
+  $suggestions[] = 'field__' . $field_name . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * Provides more granularity when Views displays are getting rendered. The two
+ * suggestions will allow the following templates to be picked up:
+ *
+ * - views-view--VIEW.html.twig
+ * - views-view--VIEW--DISPLAY.html.twig
+ *
+ * @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21theme.api.php/function/hook_theme_suggestions_HOOK_alter/8.8.x
+ */
+function whd23_theme_suggestions_views_view_alter(&$suggestions, $variables) {
+  $suggestions[] = sprintf('views_view__%s', $variables['view']->id());
+  $suggestions[] = sprintf('views_view__%s__%s', $variables['view']->id(), $variables['view']->current_display);
+}
+
+/**
+ * Implements hook_preprocess_paragraph__type().
+ */
+function whd23_preprocess_paragraph__video(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+
+  if (!$paragraph->field_video_url->isEmpty()) {
+    // Extract video slug from YouTube.
+    $qs = parse_url($paragraph->get('field_video_url')->first()->uri, PHP_URL_QUERY);
+    parse_str($qs, $params);
+    $variables['video_slug'] = $params['v'];
+    $variables['video_url'] = $paragraph->get('field_video_url')->first()->uri;
+  }
+}
+
+/**
+ * Implements hook_preprocess_image_widget().
+ */
+function whd23_preprocess_image_widget(array &$variables) {
+  $data = &$variables['data'];
+
+  // This prevents image widget templates from rendering preview container HTML
+  // to users that do not have permission to access these previews.
+  // @todo revisit in https://drupal.org/node/953034
+  // @todo revisit in https://drupal.org/node/3114318
+  if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
+    unset($data['preview']);
+  }
+}

@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for Story Images (all view modes)
+ *
+ * @see template_preprocess_field()
+ */
+#}
+{{ attach_library('whd23/whd-images') }}
+{% set num_images = 'whd-images--' ~ items|length ~ 'x' %}
+
+<figure{{ attributes.addClass(['story-item__images', 'whd-images', num_images]) }}>
+  {% for item in items %}
+    <div{{ item.attributes }}>{{ item.content }}</div>
+  {% endfor %}
+</figure>

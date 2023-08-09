@@ -1,0 +1,77 @@
+:root {
+  /**
+   * Colors
+   */
+  --cd-blue--ocha: #1f69b3;
+  --cd-blue--bright: #82b5e9;
+  --cd-blue--dark: #144372;
+  --cd-grey--light: #f2f2f2;
+  --cd-grey--dark: #4a4a4a;
+  --cd-white: #fff;
+  --cd-black: #000;
+  --cd-contrast-red: #e00000;
+
+  /**
+   * z-index reference values
+   */
+  --cd-z-default: 1;
+  --cd-z-hidden: -1;
+  --cd-z-skip-link: 1000;
+
+  /**
+   * Font sizes in REMs
+   */
+  --cd-font-size--tiny: 0.75rem;      /* 12px */
+  --cd-font-size--small: 0.875rem;    /* 14px */
+  --cd-font-size--ref: 1rem;          /* 16px */
+  --cd-font-size--base: 1.125rem;     /* 18px */
+  --cd-font-size--medium: 1.375rem;   /* 22px */
+  --cd-font-size--large: 1.625rem;    /* 26px */
+  --cd-font-size--2xbase: 1.875rem;   /* 30px */
+  --cd-font-size--2xmedium: 2.375rem; /* 38px */
+  --cd-font-size--2xlarge: 2.875rem;  /* 46px */
+
+  /**
+   * Alert colors
+   */
+  --cd-red: #cd3a1f;
+  --cd-red--light: #f8d8d3;
+  --cd-orange: #db7b18;
+  --cd-orange--light: #fae6d1;
+  --cd-yellow: #d5de26;
+  --cd-yellow--light: #f7f8d3;
+  --cd-green: #7fb92f;
+  --cd-green--light: #e8f5d6;
+
+  /**
+   * Fonts
+   * https://brand.unocha.org/d/xEPytAUjC3sH/visual-identity#/basics/fonts/multi-language-typefaces-1
+   */
+  --cd-font--noto-sans: "Noto Sans", sans-serif;
+  --cd-font--noto-sans-ar: "Noto Sans Arabic", "Noto Sans", sans-serif;
+  --cd-font--noto-sans-zh: "Noto Sans SC", "Noto Sans", sans-serif;
+
+  /**
+   * Accessibility-related properties
+   */
+  --cd-outline-size: 3px;
+
+  /**
+   * z-index management
+   */
+  --whd-z-main-nav: 100;
+  --whd-z-title: 10;
+
+  /**
+   * Site-specific brand defaults.
+   *
+   * Unlike CD, override the values directly in this section:
+   */
+  --brand-primary: #007fad;
+  --brand-primary--light: #20afcd;
+  --brand-primary--dark: #004f8d;
+  --brand-highlight: #e56a54;
+  --brand-grey: #e9f2fb;
+  --whd-content-max: 1090px;
+  --whd-text-max: 790px;
+}

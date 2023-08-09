@@ -1,0 +1,20 @@
+uuid: b209ec5e-7c02-49c7-9f5f-2af1f53fe8dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - whd23
+id: whd23_languages
+theme: whd23
+region: header
+weight: -3
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: Languages
+  label_display: '0'
+  provider: language
+visibility: {  }

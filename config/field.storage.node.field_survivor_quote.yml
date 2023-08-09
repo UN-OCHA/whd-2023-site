@@ -1,0 +1,19 @@
+uuid: 1bcc0dd7-0a90-4ce1-8849-24e38273111f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_survivor_quote
+field_name: field_survivor_quote
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

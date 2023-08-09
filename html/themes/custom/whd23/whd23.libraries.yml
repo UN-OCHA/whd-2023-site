@@ -1,0 +1,100 @@
+#####
+# Global Styling is always enabled on all pages.
+#
+global-styling:
+  css:
+    base:
+      components/cd/cd-resets/cd-resets.css: {}
+      components/whd-resets/whd-resets.css: {}
+    layout:
+      components/whd-layout/whd-layout--page.css: {}
+    component:
+      components/cd/cd-other/cd-skip-link.css: {}
+    theme:
+      components/cd/cd-other/cd-print.css: {}
+      css/brand.css: {}
+
+#####
+# Completely unaltered CD components.
+#
+cd-alert:
+  css:
+    component:
+      components/cd-alert/cd-alert.css: {}
+    theme:
+      components/cd-alert/whd-alert.css: {}
+
+cd-tabs:
+  css:
+    component:
+      components/cd-tabs/cd-tabs.css: {}
+
+#####
+# WHD-specific components
+#
+whd-button:
+  css:
+    component:
+      components/whd-button/whd-button.css: {}
+
+whd-hero:
+  css:
+    component:
+      components/whd-hero/whd-hero.css: {}
+
+whd-front:
+  css:
+    component:
+      components/whd-front/whd-front.css: {}
+
+whd-footer:
+  css:
+    component:
+      components/whd-footer/whd-footer.css: {}
+
+whd-header:
+  css:
+    component:
+      components/whd-header/whd-header.css: {}
+  js:
+    components/whd-header/whd-header.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
+whd-images:
+  css:
+    component:
+      components/whd-images/whd-images.css: {}
+
+whd-paragraphs:
+  css:
+    component:
+      components/whd-paragraphs/whd-paragraphs.css: {}
+
+whd-principles:
+  css:
+    component:
+      components/whd-principles/whd-principles.css: {}
+
+whd-story-list:
+  css:
+    component:
+      components/whd-story-list/whd-story-list.css: {}
+
+whd-story-page:
+  css:
+    component:
+      components/whd-story-page/whd-story-page.css: {}
+
+whd-survivor-stories:
+  css:
+    component:
+      components/whd-survivor-stories/whd-survivor-stories.css: {}
+
+whd-video:
+  css:
+    component:
+      components/whd-video/whd-video.css: {}
+  js:
+    components/whd-video/whd-video.js: {}

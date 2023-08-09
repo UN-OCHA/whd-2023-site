@@ -1,0 +1,18 @@
+uuid: d79364c5-901e-4a47-8431-a57a15b9a6e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Story
+type: story
+description: 'Survivor Stories. Each one is its own individual page, or one item if we list the stories somewhere.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

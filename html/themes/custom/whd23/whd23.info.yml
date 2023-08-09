@@ -1,0 +1,16 @@
+name: WHD 2023
+type: theme
+'base theme': stable9
+core_version_requirement: ^10
+version: 1.0.0
+
+libraries:
+  - core/normalize
+  - whd23/global-styling
+  - whd23/whd-header
+  - whd23/whd-footer
+  - whd23/whd-paragraphs
+
+# Historical metadata from theme creation
+generator: 'starterkit_theme:10.0.3'
+starterkit: true

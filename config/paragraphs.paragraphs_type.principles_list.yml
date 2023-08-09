@@ -1,0 +1,10 @@
+uuid: b7a98344-71bc-4f67-a14a-d09a9ddc9018
+langcode: en
+status: true
+dependencies: {  }
+id: principles_list
+label: 'Principles list'
+icon_uuid: null
+icon_default: null
+description: "Create an area to list the Humanitarian Principles. You'll be able to reorder the principles inside as you wish."
+behavior_plugins: {  }

@@ -1,0 +1,63 @@
+/**
+ * Humanitarian Principles list
+ */
+
+:root {
+  --whd-principles-margin-modifier: 0;
+}
+
+.principles-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 4rem;
+  margin-block: 4rem;
+  width: 100%;
+  max-width: var(--whd-text-max);
+}
+
+/**
+ * Humanitarian Principles item
+ */
+
+.principle {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 540px) {
+  .principle {
+    flex-direction: row;
+  }
+}
+
+/* unset generic text width */
+.principle .paragraph__text {
+  width: unset;
+}
+
+.principle__icon {
+  flex: 0 0 200px;
+  order: -1;
+  margin-inline-start: calc(2rem * var(--whd-principles-margin-modifier));
+  margin-inline-end: calc(2rem * var(--whd-principles-margin-modifier));
+}
+
+@media (min-width: 540px) {
+  .principle__icon {
+    --whd-principles-margin-modifier: 1;
+  }
+
+  /* alternate icon position when space allows */
+  .principles-list > li:nth-child(2n) .principle__icon {
+    order: 999;
+  }
+}
+
+@media (min-width: 680px) {
+  .principle__icon {
+    --whd-principles-margin-modifier: 2;
+  }
+}
