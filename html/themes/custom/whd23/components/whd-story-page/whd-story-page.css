@@ -16,6 +16,22 @@
   --whd-header-bg-color: var(--brand-primary);
 }
 
+.page-node-type-story .main-nav__contents {
+  color: black;
+  background: white;
+}
+
+.page-node-type-story .main-nav__contents a {
+  color: black;
+}
+
+.page-node-type-story .main-nav__contents a:focus-visible {
+  color: white;
+  outline: 8px solid var(--brand-primary);
+  outline-offset: -1px;
+  background: var(--brand-primary);
+}
+
 /**
  * Page contents
  */

@@ -19,3 +19,7 @@
   margin-block: 2rem;
   padding-inline: 1rem;
 }
+
+#block-whd23-content {
+  overflow-x: hidden;
+}
