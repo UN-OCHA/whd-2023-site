@@ -30,7 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul role="list"{{ attributes.addClass('main-nav__contents').setAttribute('aria-hidden', 'true') }}>
+      <ul role="list"{{ attributes.addClass('main-nav__contents') }}>
     {% else %}
       <ul role="list">
     {% endif %}
