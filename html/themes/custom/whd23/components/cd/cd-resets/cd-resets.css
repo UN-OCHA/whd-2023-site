@@ -45,6 +45,10 @@ body.no-scroll {
   height: 100%;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 /**
  * Custom-styled lists
  *
@@ -85,6 +89,10 @@ body.no-scroll {
     /* turn them off again if the browser can't draw them effectively */
     animation-play-state: paused;
   }
+
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -94,5 +102,9 @@ body.no-scroll {
     /* explicitly disable animations and transitions when requested */
     transition-duration: 0s !important;
     animation-play-state: paused;
+  }
+
+  html:focus-within {
+    scroll-behavior: auto;
   }
 }
