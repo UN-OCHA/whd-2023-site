@@ -2,6 +2,9 @@
  * WHD Front page
  */
 
+/**
+ * Legacy layout
+ */
 .path-frontpage .slogan {
   position: relative;
   display: flex;
@@ -13,6 +16,7 @@
   position: relative;
   z-index: 10;
   width: 100%;
+  max-width: 820px;
   max-width: var(--whd-content-max);
   margin-block-start: .5em;
   margin-block-end: -.25em;
@@ -25,24 +29,6 @@
   padding-inline: 1rem;
 }
 
-.path-frontpage .slogan::before {
-  position: absolute;
-  z-index: 0;
-  right: 0;
-  bottom: -65vw;
-  display: block;
-  width: 100vw;
-  height: 50.18518vw;
-  content: '';
-  background: url(../../img/whd23-homepage-banner-2x.png) 50% 0 no-repeat;
-  background-image: image-set(
-    url('../../img/whd23-homepage-banner-1x.png') 1x,
-    url('../../img/whd23-homepage-banner-2x.png') 2x,
-    url('../../img/whd23-homepage-banner-4x.png') 4x
-  );
-  background-size: 105vw;
-}
-
 .path-frontpage #block-whd23-page-title {
   display: flex;
   flex-flow: column nowrap;
@@ -52,8 +38,10 @@
 
 .path-frontpage #block-whd23-page-title h1 {
   position: relative;
+  z-index: 50;
   z-index: var(--whd-z-title);
   width: 100%;
+  max-width: 820px;
   max-width: var(--whd-content-max);
   margin: 0;
   margin-block-end: 2rem;
@@ -67,41 +55,66 @@
   padding-inline: 1rem;
 }
 
-/* Special coloring for first paragraph */
-.path-frontpage .field-content__paragraph:first-child {
-  --whd-front-color-stop: 25rem;
 
-  padding-block-start: calc(4rem + 15vw);
-  color: var(--cd-white);
-  background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
-  font-size: 1.25em;
-}
 
 /**
- * Desktop.
- *
- * Move banner to the end of reading-direction.
+ * Modern layout
  */
-@media screen and (min-width: 940px) {
-  .path-frontpage .slogan {
-    margin-block-start: 10rem;
-  }
-
+@supports (--css-vars: true) {
   .path-frontpage .slogan::before {
-    top: calc(100px - 14vw);
-    background-position: 105% 0;
-    background-size: calc(50px + 44vw);
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -65vw;
+    display: block;
+    width: 100vw;
+    height: 50.18518vw;
+    content: '';
+    background: url(../../img/whd23-homepage-banner-2x.png) 50% 0 no-repeat;
+    background-image: image-set(
+      url('../../img/whd23-homepage-banner-1x.png') 1x,
+      url('../../img/whd23-homepage-banner-2x.png') 2x,
+      url('../../img/whd23-homepage-banner-4x.png') 4x
+    );
+    background-size: 105vw;
   }
 
-  [dir="rtl"] .path-frontpage .slogan::before {
-    transform: scale(-1, 1);
-  }
-
-  .path-frontpage #block-whd23-page-title {
-    margin: 0;
-  }
-
+  /* Special coloring for first paragraph */
   .path-frontpage .field-content__paragraph:first-child {
-    padding-block-start: 4rem;
+    --whd-front-color-stop: 25rem;
+
+    padding-block-start: calc(4rem + 15vw);
+    color: var(--cd-white);
+    background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) var(--whd-front-color-stop), var(--cd-white) var(--whd-front-color-stop), var(--cd-white));
+    font-size: 1.25em;
+  }
+
+  /**
+   * Desktop.
+   *
+   * Move banner to the end of reading-direction.
+   */
+  @media screen and (min-width: 940px) {
+    .path-frontpage .slogan {
+      margin-block-start: 10rem;
+    }
+
+    .path-frontpage .slogan::before {
+      top: max(-145px, calc(100px - 14vw));
+      background-position: 105% 0;
+      background-size: calc(50px + 44vw);
+    }
+
+    [dir="rtl"] .path-frontpage .slogan::before {
+      transform: scale(-1, 1);
+    }
+
+    .path-frontpage #block-whd23-page-title {
+      margin: 0;
+    }
+
+    .path-frontpage .field-content__paragraph:first-child {
+      padding-block-start: 4rem;
+    }
   }
 }

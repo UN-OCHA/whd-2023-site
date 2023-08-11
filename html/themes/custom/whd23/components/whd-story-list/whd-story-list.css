@@ -8,165 +8,189 @@
   --whd-card-list-color-stop: 320px;
 }
 
-.story-list {
-  display: flex;
-  flex-flow: row wrap;
-  margin-block: 2rem;
-  padding-inline: 0;
-}
-
-.story-list > * {
-  flex: 0 1 calc((100% / var(--whd-card-list-num-cols)) - var(--whd-card-list-gap-size) + var(--whd-card-list-gap-size) / var(--whd-card-list-num-cols));
-}
-
-/* Two-col */
-@media screen and (min-width: 480px) {
-  .story-list {
-    --whd-card-list-num-cols: 2;
-
-    gap: calc(4 * var(--whd-card-list-gap-size)) var(--whd-card-list-gap-size);
-    padding-inline: var(--whd-card-list-gap-size);
-  }
-
-  .story-list > *:nth-child(1n + 3) .story-item__title {
-    color: var(--cd-white);
-  }
-}
-
-/* Three-col */
-@media screen and (min-width: 750px) {
-  .story-list {
-    --whd-card-list-num-cols: 3;
-  }
-
-  /* Re-color the third item now that we have a new layout */
-  .story-list > *:nth-child(3) .story-item__title {
-    color: var(--cd-black);
-  }
-}
-
-.paragraph--type--story-list .paragraph__text {
-  text-align: center;
-}
-
 /**
- * Color treatment for mobile.
+ * Legacy layout
  *
- * There's an alternating color treatment that spans across the elements
- * themselves, but it disappears once the columns kick in.
+ * For all browsers.
  */
-
-@media screen and (max-width: 480px) {
-  .story-list > *:nth-child(odd) {
-    background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) 40%, var(--brand-primary) 40%, var(--brand-primary));
-  }
-
-  .story-list > *:nth-child(odd) .story-item__quote {
-    color: var(--cd-white);
-  }
-
-  .story-list > *:nth-child(even) {
-    background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) 40%, var(--cd-white) 40%, var(--cd-white));
-  }
-
-  .story-list > *:nth-child(even) .story-item__title a,
-  .story-list > *:nth-child(even) .story-item__subtitle {
-    color: var(--cd-white);
-  }
-
-  .story-list > *:nth-child(even) .story-item__link a {
-    color: var(--cd-white);
-    background: var(--brand-primary);
-  }
-
-  .story-item__title.story-item__title {
-    margin-block-start: 4rem;
-  }
-}
-
-/**
- * Color treatment for wider screens
- */
-@media screen and (min-width: 480px) {
-  .paragraph--type--story-list {
-    background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) var(--whd-card-list-color-stop), var(--brand-primary) var(--whd-card-list-color-stop), var(--brand-primary));
-  }
-}
-
-
-/**
- * WHD Story Item
- */
-.story-item {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  padding-bottom: 3rem; /* leave room for positioned links */
+.story-item__title,
+.story-item__subtitle {
   text-align: center;
 }
 
-.story-item__title {
-  order: -1;
-  color: var(--cd-black);
-  font-size: 1rem;
-  margin-block: 1rem;
-  padding-inline: 1rem;
-}
-
-.story-item__title a {
-  color: inherit;
-}
-
-.story-item__subtitle {
-  font-weight: 400;
-}
-
-.story-item__images {
-  margin-inline: 1rem;
-}
-
-@media screen and (min-width: 480px) {
-  .story-item__images {
-    margin-inline: 0;
-  }
-}
-
-.story-item__quote {
-  padding-inline: 1rem;
-}
-
-@media screen and (min-width: 480px) {
-  .story-item__quote {
+/**
+ * Modern Layout
+ *
+ * Only for browsers with native CSS Vars.
+ */
+@supports (--css-vars: true) {
+  .story-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-block: 2rem;
     padding-inline: 0;
+  }
+
+  .story-list > * {
+    flex: 0 1 calc((100% / var(--whd-card-list-num-cols)) - var(--whd-card-list-gap-size) + var(--whd-card-list-gap-size) / var(--whd-card-list-num-cols));
+  }
+
+  .paragraph--type--story-list .paragraph__text {
+    text-align: center;
+  }
+
+
+  /**
+   * WHD Story Item
+   */
+  .story-item {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding-bottom: 3rem; /* leave room for positioned links */
+    text-align: center;
+  }
+
+  .story-item__title {
+    order: -1;
+    color: var(--cd-black);
+    font-size: 1rem;
+    margin-block: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .story-item__title a {
+    color: inherit;
+  }
+
+  .story-item__title a:focus {
     color: var(--cd-white);
-  }
-}
-
-.story-item__link {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.story-item__link a {
-  display: inline-block;
-  padding: .5rem 1rem;
-  white-space: nowrap;
-  text-decoration: none;
-  color: var(--brand-primary);
-  background: var(--cd-white);
-  font-weight: 700;
-}
-
-/* last item in mobile-layout list needs some special treatment */
-@media screen and (max-width: 480px) {
-  .story-list > *:last-child .story-item {
-    padding-block-end: 5rem;
+    outline: 4px solid var(--cd-black);
+    outline-offset: -1px;
+    background: var(--cd-black);
   }
 
-  .story-list > *:last-child .story-item__link {
-    bottom: 2rem;
+  .story-item__subtitle {
+    font-weight: 400;
+  }
+
+  .story-item__images {
+    margin-inline: 1rem;
+  }
+
+  .story-item__quote {
+    padding-inline: 1rem;
+  }
+
+  .story-item__link {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .story-item__link a {
+    display: inline-block;
+    padding: .5rem 1rem;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--brand-primary);
+    background: var(--cd-white);
+    font-weight: 700;
+  }
+
+  /* Two-col */
+  @media screen and (min-width: 480px) {
+    .story-list {
+      --whd-card-list-num-cols: 2;
+
+      gap: calc(4 * var(--whd-card-list-gap-size)) var(--whd-card-list-gap-size);
+      padding-inline: var(--whd-card-list-gap-size);
+    }
+
+    .story-list > *:nth-child(1n + 3) .story-item__title {
+      color: var(--cd-white);
+    }
+  }
+
+  /* Three-col */
+  @media screen and (min-width: 750px) {
+    .story-list {
+      --whd-card-list-num-cols: 3;
+    }
+
+    /* Re-color the third item now that we have a new layout */
+    .story-list > *:nth-child(3) .story-item__title {
+      color: var(--cd-black);
+    }
+  }
+
+  /**
+   * Color treatment for mobile.
+   *
+   * There's an alternating color treatment that spans across the elements
+   * themselves, but it disappears once the columns kick in.
+   */
+
+  @media screen and (max-width: 480px) {
+    .story-list > *:nth-child(odd) {
+      background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) 40%, var(--brand-primary) 40%, var(--brand-primary));
+    }
+
+    .story-list > *:nth-child(odd) .story-item__quote {
+      color: var(--cd-white);
+    }
+
+    .story-list > *:nth-child(even) {
+      background: linear-gradient(to bottom, var(--brand-primary), var(--brand-primary) 40%, var(--cd-white) 40%, var(--cd-white));
+    }
+
+    .story-list > *:nth-child(even) .story-item__title a,
+    .story-list > *:nth-child(even) .story-item__subtitle {
+      color: var(--cd-white);
+    }
+
+    .story-list > *:nth-child(even) .story-item__link a {
+      color: var(--cd-white);
+      background: var(--brand-primary);
+    }
+
+    .story-item__title.story-item__title {
+      margin-block-start: 4rem;
+    }
+  }
+
+  /**
+   * Color treatment for wider screens
+   */
+  @media screen and (min-width: 480px) {
+    .paragraph--type--story-list {
+      background: linear-gradient(to bottom, var(--cd-white), var(--cd-white) var(--whd-card-list-color-stop), var(--brand-primary) var(--whd-card-list-color-stop), var(--brand-primary));
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .story-item__images {
+      margin-inline: 0;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .story-item__quote {
+      padding-inline: 0;
+      color: var(--cd-white);
+    }
+  }
+
+  /* last item in mobile-layout list needs some special treatment */
+  @media screen and (max-width: 480px) {
+    .story-list > *:last-child .story-item {
+      padding-block-end: 5rem;
+    }
+
+    .story-list > *:last-child .story-item__link {
+      bottom: 2rem;
+    }
   }
 }

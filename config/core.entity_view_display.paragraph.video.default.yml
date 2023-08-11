@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.video.field_text
     - field.field.paragraph.video.field_title
+    - field.field.paragraph.video.field_video_transcript
     - field.field.paragraph.video.field_video_url
     - paragraphs.paragraphs_type.video
   module:
@@ -29,6 +30,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_video_transcript:
+    type: basic_string
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
   field_video_url:
     type: link_separate

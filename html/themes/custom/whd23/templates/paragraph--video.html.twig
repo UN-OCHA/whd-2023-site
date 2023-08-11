@@ -50,7 +50,8 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content|without('field_video_url') }}
+      {{ content.field_title }}
+      {{ content.field_text }}
 
       <div class="video" data-video-slug="{{ video_slug }}" data-video-button-label="{{ 'Load video'|t }}">
         <a href="{{ video_url }}"
@@ -64,6 +65,13 @@
             alt="{{ 'Preview of the video from YouTube'|t }}">
         </a>
       </div>
+
+      {% if paragraph.field_video_transcript.value %}
+        <details class="video__transcript">
+          <summary>{{ 'Video transcript'|t }}</summary>
+          {{ content.field_video_transcript }}
+        </details>
+      {% endif %}
     {% endblock %}
   </div>
 {% endblock paragraph %}

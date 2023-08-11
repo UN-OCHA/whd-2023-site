@@ -13,6 +13,7 @@ while keeping the content readable. */
 
 .paragraph > * {
   width: 100%;
+  max-width: 820px; /* IE */
   max-width: var(--whd-content-max);
   padding-inline: 1rem;
 }
@@ -37,4 +38,11 @@ a max-width suitable for long-form copy. */
 
 .paragraph__text p + p {
   margin-block-start: 1rem;
+}
+
+.paragraph__text a:focus {
+  color: var(--cd-white);
+  outline: 4px solid var(--cd-black);
+  outline-offset: -1px;
+  background: var(--cd-black);
 }
