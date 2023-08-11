@@ -1,6 +1,43 @@
+<!--- BEGIN HEADER -->
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file.
+<!--- END HEADER -->
+
+## [1.2.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.1.0...v1.2.0) (2023-08-11)
+
+### Features
+
+* Add video transcripts ([49cd9e](https://github.com/UN-OCHA/whd-2023-site/commit/49cd9ea42709d7789ab963b24a1f50b199dcbede))
+
+### Bug Fixes
+
+* New homepage banner without shadow ([1540bc](https://github.com/UN-OCHA/whd-2023-site/commit/1540bc7d6c987608ebee778201da2d06bc4f2e58))
+* Remove 'Survivor' word from Story List paragraph ([28c10b](https://github.com/UN-OCHA/whd-2023-site/commit/28c10bdce3bb9421456d0d6b72952fee65211058))
+* Survivor Stories page displays in order created ([4015fc](https://github.com/UN-OCHA/whd-2023-site/commit/4015fc0da510dbbbfeaa0009ff6a0c06895d4673))
+
+##### A11y
+
+* Improve focus styles in the content fields ([1585c4](https://github.com/UN-OCHA/whd-2023-site/commit/1585c44e89350e0f42245a89ab0332791b3ff104))
+* Only hide menu from a11y tree once JS fires ([1b852a](https://github.com/UN-OCHA/whd-2023-site/commit/1b852a67da6f3edec68a82ad8e4921624b3a69f1))
+
+##### IE
+
+* Clean up IE presentation, mostly by disabling stuff ([ded60c](https://github.com/UN-OCHA/whd-2023-site/commit/ded60ce186758e61db4b32fafc51ccdb79602c18))
+* Clean up Survivor Stories list page ([7f1bf5](https://github.com/UN-OCHA/whd-2023-site/commit/7f1bf5f95e8228af1fdb0cf14be003918fe083cc))
+* Don't allow IE to inject JS class ([95ffeb](https://github.com/UN-OCHA/whd-2023-site/commit/95ffeb314f0e330d3e72ab519590796d642ba6f0))
+* Humanitarian Principles page ([13acca](https://github.com/UN-OCHA/whd-2023-site/commit/13acca37a644d756c5777c580423cce26336fb6c))
+* Implement fonts in IE-friendly manner ([bfe100](https://github.com/UN-OCHA/whd-2023-site/commit/bfe100b9d52a6e2b1cc4cf5fe8ea6bb75bc90ce3))
+* Make video thumbnail visible and clickable ([5dccbd](https://github.com/UN-OCHA/whd-2023-site/commit/5dccbdf82604e29418f1b20cc246d952e6497a74))
+* RTL-friendly nav spacing ([616558](https://github.com/UN-OCHA/whd-2023-site/commit/61655897b19dd9ee8283af4cf83ceb837ec517ec))
+
+##### Style
+
+* Homepage banner needed love on huge screens ([9ed6b3](https://github.com/UN-OCHA/whd-2023-site/commit/9ed6b312f8e3925827010b02111fa98ed2391b47))
+* Make menu more distinguishable on Survivor Story pages ([8707f0](https://github.com/UN-OCHA/whd-2023-site/commit/8707f0301f2b1625646bb0885113e2b8bc340ccf))
+* Survivor Stories photos caused mobile overflow-x ([0c8078](https://github.com/UN-OCHA/whd-2023-site/commit/0c807870ced00d908f93c51a9439385bd1422f64))
+* Whoops, forgot nav toggle without focus ([76817c](https://github.com/UN-OCHA/whd-2023-site/commit/76817cdd38cc79533d28a3f2534f93e75cb0138f))
+
 
 ## 1.1.0 (2023-08-08)
 
