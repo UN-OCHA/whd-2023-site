@@ -3,7 +3,7 @@
  */
 
 :root {
-  --whd-story-bg-cutoff: 620px;
+  --whd-story-bg-cutoff: 490px;
 }
 
 .page-node-type-story {
@@ -39,16 +39,6 @@
 /**
  * Page contents
  */
-.survivor-story__pretitle {
-  margin-block-start: 4rem;
-  margin-block-end: 0;
-  text-align: center;
-  color: var(--cd-white);
-  text-shadow: .5px .5px 0 #0006;
-  font-size: 3.6rem;
-  font-size: clamp(2.4rem, 10vw, 3.6rem);
-}
-
 .page-node-type-story #block-whd23-page-title h1 {
   margin-block: 0;
   color: var(--cd-white);
@@ -69,10 +59,21 @@
 }
 
 .page-node-type-story .whd-images {
+  position: relative;
   width: 100%;
   max-width: var(--whd-content-max);
   margin-inline: auto;
   margin-block: 7rem;
+}
+
+.page-node-type-story .whd-images::after {
+  position: absolute;
+  z-index: -1;
+  bottom: -4rem;
+  width: 100vw;
+  height: 6rem;
+  content: '';
+  background: var(--cd-white);
 }
 
 @media screen and (min-width: 820px) {
