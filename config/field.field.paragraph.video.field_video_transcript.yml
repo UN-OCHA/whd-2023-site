@@ -1,0 +1,19 @@
+uuid: 87d44fdc-85d6-43d4-83fc-48ea401a89b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_transcript
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_video_transcript
+field_name: field_video_transcript
+entity_type: paragraph
+bundle: video
+label: Transcript
+description: 'Enter in the transcript of the video, or a detailed explanation of the media.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
