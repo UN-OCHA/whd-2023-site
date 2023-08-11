@@ -33,7 +33,10 @@
         mainNavContents.setAttribute('aria-hidden', String(pressed));
       });
 
-      // Allow transitions now that nav is set up
+      // Prepare nav for interactive use:
+      // - Hide menu from a11y tree since button is now functional.
+      // - Allow transitions when toggling nav by marking as processed.
+      mainNavContents.setAttribute('aria-hidden', 'true');
       mainNavContents.classList.add('is--processed');
 
       // Clicking a link should shut the nav.
