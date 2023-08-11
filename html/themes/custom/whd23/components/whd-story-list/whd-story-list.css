@@ -64,6 +64,13 @@
     color: inherit;
   }
 
+  .story-item__title a:focus {
+    color: var(--cd-white);
+    outline: 4px solid var(--cd-black);
+    outline-offset: -1px;
+    background: var(--cd-black);
+  }
+
   .story-item__subtitle {
     font-weight: 400;
   }
