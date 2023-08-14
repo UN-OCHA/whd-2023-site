@@ -53,7 +53,10 @@
       {{ content.field_title }}
       {{ content.field_text }}
 
-      <div class="video" data-video-slug="{{ video_slug }}" data-video-button-label="{{ 'Load video'|t }}">
+      <div class="video"
+        data-video-slug="{{ video_slug }}"
+        data-video-button-label="{{ 'Load video'|t }}"
+        data-video-origin="{{ url('<front>')|render|trim('/') }}">
         <a href="{{ video_url }}"
           target="_blank"
           rel="noopener"
