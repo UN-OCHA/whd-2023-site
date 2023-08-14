@@ -4,6 +4,16 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.2](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.1...v1.2.2) (2023-08-14)
+
+### Bug Fixes
+
+* Allow GA to track video ([9280ab](https://github.com/UN-OCHA/whd-2023-site/commit/9280ab2f8cf6de584077270f943b5a465fc980f0))
+* I'm guessing all this tracking requires cookies ([463847](https://github.com/UN-OCHA/whd-2023-site/commit/46384760d36c43a49f5b8d1eb4c1667139f7ebe5))
+
+
+---
+
 ## [1.2.1](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.0...v1.2.1) (2023-08-14)
 
 ### Bug Fixes
