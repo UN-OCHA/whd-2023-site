@@ -4,6 +4,21 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.2.1](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.0...v1.2.1) (2023-08-14)
+
+### Bug Fixes
+
+* Local config import failed bc devel wasn't installed ([6e63cf](https://github.com/UN-OCHA/whd-2023-site/commit/6e63cfdb1374ca018992147908a24a10602e0633))
+* Ooops, do enable config_split, so that works on dev. ([6ea1e9](https://github.com/UN-OCHA/whd-2023-site/commit/6ea1e912af4a93533a2af35aae1de25ddbc13db1))
+* Remove Survivor Stories pretitle from details page ([610dcb](https://github.com/UN-OCHA/whd-2023-site/commit/610dcb5e743800cbfa5d910b28f428246b3385a3))
+
+##### A11y
+
+* Not really a fix so much as a concession ([797bdd](https://github.com/UN-OCHA/whd-2023-site/commit/797bddeedfcf37e333fb9913997a3fc90ab86a9e))
+
+
+---
+
 ## [1.2.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.1.0...v1.2.0) (2023-08-11)
 
 ### Features
