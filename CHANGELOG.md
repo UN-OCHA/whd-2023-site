@@ -4,6 +4,31 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.2...v1.3.0) (2023-08-15)
+
+### Features
+
+
+##### Performance
+
+* Webp story list item images ([cde8f1](https://github.com/UN-OCHA/whd-2023-site/commit/cde8f122f60330fc0a46d33e071ef9d2df376205))
+
+### Bug Fixes
+
+* Trying YT JS API one more time ([eb43b6](https://github.com/UN-OCHA/whd-2023-site/commit/eb43b6b3a9b22f31dc8690e8076900e728aa9eef))
+
+##### A11y
+
+* Remove improper hierarchy on heading ([310083](https://github.com/UN-OCHA/whd-2023-site/commit/31008366d10f5b065164acd2991bc716010abfff))
+
+##### Performance
+
+* Responsive image for YouTube thumbnail ([e11475](https://github.com/UN-OCHA/whd-2023-site/commit/e114753331b543b950f046c50ef7ea068dc34ef6))
+* Webp for Stories detail page images ([a66034](https://github.com/UN-OCHA/whd-2023-site/commit/a660344b795c98103c78c72a2d2ea48c4a2d8073))
+
+
+---
+
 ## [1.2.2](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.1...v1.2.2) (2023-08-14)
 
 ### Bug Fixes
