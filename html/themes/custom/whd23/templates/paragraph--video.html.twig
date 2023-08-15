@@ -63,8 +63,14 @@
           class="video__link">
           <img
             class="video__img"
-            loading="lazy"
-            src="https://i.ytimg.com/vi/{{ video_slug }}/maxresdefault.jpg"
+            {# loading="lazy" #}
+            src="https://img.youtube.com/vi/{{ video_slug }}/maxresdefault.jpg"
+            srcset="https://img.youtube.com/vi/{{ video_slug }}/mqdefault.jpg 320w,
+                    https://img.youtube.com/vi/{{ video_slug }}/hqdefault.jpg 480w,
+                    https://img.youtube.com/vi/{{ video_slug }}/sddefault.jpg 640w,
+                    https://img.youtube.com/vi/{{ video_slug }}/maxresdefault.jpg 1280w"
+            sizes="(min-width: 1090px) calc(1090px - 2rem),
+                   calc(100% - 2rem)"
             alt="{{ 'Preview of the video from YouTube'|t }}">
         </a>
       </div>
