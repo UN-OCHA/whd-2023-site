@@ -33,7 +33,7 @@
         return;
       }
 
-      addPrefetch('preconnect', 'https://www.youtube-nocookie.com');
+      addPrefetch('preconnect', 'https://www.youtube.com');
       addPrefetch('preconnect', 'https://www.google.com');
       thisVideo.dataset.videoConnected = 'true';
     });
