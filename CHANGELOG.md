@@ -4,6 +4,19 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.1](https://github.com/UN-OCHA/whd-2023-site/compare/v1.3.0...v1.3.1) (2023-08-16)
+
+### Bug Fixes
+
+* Restrict YT related videos to UN channel ([37a6bf](https://github.com/UN-OCHA/whd-2023-site/commit/37a6bf33240408156e390e61108f05aae5c6a3af))
+
+##### Performance
+
+* We switched YouTube domains but I forgot the preconnect ([1fe45a](https://github.com/UN-OCHA/whd-2023-site/commit/1fe45a4928a132dd3737628ac7e10849ddecee4c))
+
+
+---
+
 ## [1.3.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.2...v1.3.0) (2023-08-15)
 
 ### Features
