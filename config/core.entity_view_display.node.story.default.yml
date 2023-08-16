@@ -7,11 +7,11 @@ dependencies:
     - field.field.node.story.field_images
     - field.field.node.story.field_survivor_profile
     - field.field.node.story.field_survivor_quote
-    - image.style.gallery_item
     - node.type.story
+    - responsive_image.styles.story_list_item
   module:
     - entity_reference_revisions
-    - image
+    - responsive_image
     - user
 id: node.story.default
 targetEntityType: node
@@ -28,11 +28,11 @@ content:
     weight: 2
     region: content
   field_images:
-    type: image
+    type: responsive_image
     label: hidden
     settings:
+      responsive_image_style: story_list_item
       image_link: ''
-      image_style: gallery_item
       image_loading:
         attribute: lazy
     third_party_settings: {  }

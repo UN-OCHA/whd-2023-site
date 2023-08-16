@@ -4,6 +4,56 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.3.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.2...v1.3.0) (2023-08-15)
+
+### Features
+
+
+##### Performance
+
+* Webp story list item images ([cde8f1](https://github.com/UN-OCHA/whd-2023-site/commit/cde8f122f60330fc0a46d33e071ef9d2df376205))
+
+### Bug Fixes
+
+* Trying YT JS API one more time ([eb43b6](https://github.com/UN-OCHA/whd-2023-site/commit/eb43b6b3a9b22f31dc8690e8076900e728aa9eef))
+
+##### A11y
+
+* Remove improper hierarchy on heading ([310083](https://github.com/UN-OCHA/whd-2023-site/commit/31008366d10f5b065164acd2991bc716010abfff))
+
+##### Performance
+
+* Responsive image for YouTube thumbnail ([e11475](https://github.com/UN-OCHA/whd-2023-site/commit/e114753331b543b950f046c50ef7ea068dc34ef6))
+* Webp for Stories detail page images ([a66034](https://github.com/UN-OCHA/whd-2023-site/commit/a660344b795c98103c78c72a2d2ea48c4a2d8073))
+
+
+---
+
+## [1.2.2](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.1...v1.2.2) (2023-08-14)
+
+### Bug Fixes
+
+* Allow GA to track video ([9280ab](https://github.com/UN-OCHA/whd-2023-site/commit/9280ab2f8cf6de584077270f943b5a465fc980f0))
+* I'm guessing all this tracking requires cookies ([463847](https://github.com/UN-OCHA/whd-2023-site/commit/46384760d36c43a49f5b8d1eb4c1667139f7ebe5))
+
+
+---
+
+## [1.2.1](https://github.com/UN-OCHA/whd-2023-site/compare/v1.2.0...v1.2.1) (2023-08-14)
+
+### Bug Fixes
+
+* Local config import failed bc devel wasn't installed ([6e63cf](https://github.com/UN-OCHA/whd-2023-site/commit/6e63cfdb1374ca018992147908a24a10602e0633))
+* Ooops, do enable config_split, so that works on dev. ([6ea1e9](https://github.com/UN-OCHA/whd-2023-site/commit/6ea1e912af4a93533a2af35aae1de25ddbc13db1))
+* Remove Survivor Stories pretitle from details page ([610dcb](https://github.com/UN-OCHA/whd-2023-site/commit/610dcb5e743800cbfa5d910b28f428246b3385a3))
+
+##### A11y
+
+* Not really a fix so much as a concession ([797bdd](https://github.com/UN-OCHA/whd-2023-site/commit/797bddeedfcf37e333fb9913997a3fc90ab86a9e))
+
+
+---
+
 ## [1.2.0](https://github.com/UN-OCHA/whd-2023-site/compare/v1.1.0...v1.2.0) (2023-08-11)
 
 ### Features

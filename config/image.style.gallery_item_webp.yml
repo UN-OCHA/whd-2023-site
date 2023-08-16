@@ -1,0 +1,21 @@
+uuid: 962a9b6d-3aea-41e1-be9f-5056d548a83a
+langcode: en
+status: true
+dependencies: {  }
+name: gallery_item_webp
+label: 'Gallery item WebP'
+effects:
+  279eb245-8312-462a-b594-f598396b2c45:
+    uuid: 279eb245-8312-462a-b594-f598396b2c45
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  cac1b75f-6f96-4aa0-94c5-610bd4b0ce35:
+    uuid: cac1b75f-6f96-4aa0-94c5-610bd4b0ce35
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 705
+      height: 529
+      anchor: center-center

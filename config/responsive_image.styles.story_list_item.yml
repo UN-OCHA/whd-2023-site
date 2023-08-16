@@ -1,0 +1,21 @@
+uuid: c152115a-7221-40d5-91eb-f5cc1dbb6ab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.gallery_item
+    - image.style.gallery_item_webp
+id: story_list_item
+label: 'Story list item'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: "(min-width: 1090px) calc((1090px / 3) - 1rem + 1rem / 3)\r\n(min-width: 750px) calc((100vw / 3) - 1rem + 1rem / 3)\r\n(min-width: 480px) calc((100vw / 2) - 1rem + 1rem / 2)\r\ncalc(100vw - 2rem)"
+      sizes_image_styles:
+        - gallery_item
+        - gallery_item_webp
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: gallery_item
