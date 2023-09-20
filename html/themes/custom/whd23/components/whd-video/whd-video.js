@@ -33,16 +33,16 @@
         return;
       }
 
-      addPrefetch('preconnect', 'https://www.youtube-nocookie.com');
+      addPrefetch('preconnect', 'https://www.youtube.com');
       addPrefetch('preconnect', 'https://www.google.com');
       thisVideo.dataset.videoConnected = 'true';
     });
 
   });
 
-  // Accepts a DOM element and replaces it with a YouTube iframe.
+  // Accepts a DOM container and replaces its contents with a YouTube iframe.
   function prepVideo(video) {
-    video.innerHTML = '<iframe class="video__iframe" src="https://www.youtube.com/embed/' + video.dataset.videoSlug + '?autoplay=1&playsinline=1&enablejsapi=1&origin=' + encodeURIComponent(video.dataset.videoOrigin) + '" frameborder="0" allow="autoplay; fullscreen" sandbox="allow-same-origin allow-scripts"></iframe>';
+    video.innerHTML = '<iframe class="video__iframe" src="https://www.youtube.com/embed/' + video.dataset.videoSlug + '?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(video.dataset.videoOrigin) + '" frameborder="0" allow="autoplay; fullscreen" sandbox="allow-same-origin allow-scripts"></iframe>';
   }
 
   // Warm TCP connections by adding <link>s to the <head>.
