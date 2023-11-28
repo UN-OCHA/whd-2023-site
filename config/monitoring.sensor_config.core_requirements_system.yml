@@ -1,0 +1,21 @@
+uuid: fbfba90f-7389-4c19-8212-3170d9a433f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: core_requirements_system
+label: 'Module system'
+description: 'Requirements of the system module'
+category: Requirements
+plugin_id: core_requirements
+result_class: null
+value_label: null
+value_type: no_value
+caching_time: 3600
+settings:
+  module: system
+  exclude_keys:
+    - cron
+thresholds:
+  type: none
