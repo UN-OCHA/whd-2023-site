@@ -36,7 +36,7 @@
         "drupal/imagemagick": "^3.4",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/link_allowed_hosts": "^1.0",
-        "drupal/maintenance200": "^1.1",
+        "drupal/maintenance200": "^2",
         "drupal/memcache": "^2.5",
         "drupal/metatag": "^1.22",
         "drupal/paragraphs": "^1.15",
